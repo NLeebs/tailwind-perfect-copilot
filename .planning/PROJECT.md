@@ -21,6 +21,10 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 - ✓ Home NavCard grid as the navigation hub between slides — existing
 - ✓ Vitest + React Testing Library test suite — existing
 - ✓ Tailwind v4 config entirely in globals.css (no tailwind.config.js) — existing
+- ✓ `cn()` utility at `src/lib/utils.ts` (clsx + tailwind-merge v3) — validated Phase 1
+- ✓ `<CodeCallout>` RSC at `src/components/CodeCallout.tsx` — TV-legible chip with dark: and 3xl: — validated Phase 1
+- ✓ Runtime deps installed: clsx, tailwind-merge@^3, motion, shiki, shiki-magic-move — validated Phase 1
+- ✓ Single dark mode source of truth — prefers-color-scheme removed, @custom-variant dark authoritative — validated Phase 1
 
 ### Active
 
@@ -66,6 +70,9 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 | Home NavCard grid as navigation hub | Simpler to navigate for both presenter and audience; avoids slide-runner complexity | — Pending |
 | Minimal inline callouts over full code blocks | Audience reading from a distance; dense code blocks hurt readability at TV scale | — Pending |
 | Per-slide RSC + "use client" isolation | Teaches the RSC boundary model implicitly while keeping demos interactive | — Pending |
+| tailwind-merge@^3 (not v2) | v2 is Tailwind v3-only; this project uses Tailwind v4 | Phase 1 |
+| motion package (not framer-motion) | Maintained package; imported as "motion/react" | Phase 1 |
+| CodeCallout class string as single static literal | Tailwind purger cannot detect dynamically constructed class strings | Phase 1 |
 
 ## Evolution
 
