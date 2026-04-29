@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-28)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** Phase 2 — Slide 2: What Is Tailwind
+**Current focus:** Phase 3 — Slide 3: Core Utility Classes
 
 ## Current Position
 
-Phase: 2 of 7 (Slide 2 — What Is Tailwind)
-Plan: 0 of 1 in current phase
-Status: Ready to execute — Phase 2 planned (1 plan, 1 wave)
-Last activity: 2026-04-29 — Phase 2 planned (02-01-PLAN.md created, verification passed)
+Phase: 3 of 7 (Slide 3 — Core Utility Classes)
+Plan: 0 of TBD in current phase
+Status: Phase 2 complete — ready to discuss/plan Phase 3
+Last activity: 2026-04-29 — Phase 2 complete (ButtonComparison island and what-is-tailwind page built, yarn build passes)
 
-Progress: [███░░░░░░░] 14%
+Progress: [█████░░░░░] 29%
 
 ## Performance Metrics
 
@@ -46,6 +46,8 @@ Recent decisions affecting current work:
 - Phase 1: `tailwind-merge` must be v3 (v2 is Tailwind v3 only); import from `"motion/react"` not `"framer-motion"`
 - All phases: No dynamic class string interpolation — use lookup-table maps with complete class strings everywhere
 - All phases: Every interactive demo is a leaf-node "use client" island; page.tsx stays RSC
+- Phase 2: Single-source const pattern — extract className string as a named const so both the element and its CodeCallout use the same value (prevents drift)
+- Phase 2: Two-column grid with labeled overlines established as the slide layout pattern: `grid grid-cols-2 gap-6 3xl:gap-12` with `text-xs uppercase tracking-widest` overlines
 
 ### Pending Todos
 
@@ -67,5 +69,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-29
-Stopped at: Phase 1 complete. CodeCallout RSC created and verified. Advancing to Phase 2.
+Stopped at: Phase 2 complete. ButtonComparison island and what-is-tailwind page built and verified. Advancing to Phase 3.
 Resume file: none

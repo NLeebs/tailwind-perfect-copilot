@@ -13,7 +13,7 @@ Build five stub slides (Slides 2–6) into fully interactive demo pages, each sh
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Shared Infrastructure** - CodeCallout component, cn() utility, library installs, and dark mode conflict fix
-- [ ] **Phase 2: Slide 2 — What Is Tailwind** - Side-by-side semantic vs. utility comparison with inline callouts
+- [x] **Phase 2: Slide 2 — What Is Tailwind** - Side-by-side semantic vs. utility comparison with inline callouts
 - [ ] **Phase 3: Slide 3 — Core Utility Classes** - Progressive card-building demo and flex vs. grid comparison
 - [ ] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
 - [ ] **Phase 5: Slide 5 — Customizing Tailwind** - @theme token pipeline, @utility, and @layer base callouts with Shiki
@@ -46,7 +46,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The slide renders a "class list as documentation" card where the Tailwind class string is displayed inline as a callout, readable without opening any separate file
   3. Both demos render correctly in dark mode (ThemeToggle applies dark: variants visibly)
 **Plans**: 1 plan
-- [ ] 02-01-PLAN.md — Create ButtonComparison client island and replace page.tsx stub with two-column slide layout
+- [x] 02-01-PLAN.md — Create ButtonComparison client island and replace page.tsx stub with two-column slide layout
 **UI hint**: yes
 
 ### Phase 3: Slide 3 — Core Utility Classes
@@ -112,7 +112,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Shared Infrastructure | 3/3 | Complete | 2026-04-29 |
-| 2. Slide 2 — What Is Tailwind | 0/1 | Not started | - |
+| 2. Slide 2 — What Is Tailwind | 1/1 | Complete | 2026-04-29 |
 | 3. Slide 3 — Core Utility Classes | 0/TBD | Not started | - |
 | 4. Slide 4 — Responsiveness & Dark Mode | 0/TBD | Not started | - |
 | 5. Slide 5 — Customizing Tailwind | 0/TBD | Not started | - |
