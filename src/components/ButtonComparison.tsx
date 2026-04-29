@@ -3,9 +3,9 @@ import { useState } from "react";
 import CodeCallout from "@/components/CodeCallout";
 
 const TAILWIND_BTN_CLASSES =
-  "bg-cyan-500 dark:bg-cyan-600 text-white font-semibold px-5 py-3 rounded-lg 3xl:px-8 3xl:py-4";
+  "bg-cyan-500 dark:bg-cyan-600 text-white font-semibold text-sm 3xl:text-xl px-5 py-3 rounded-lg 3xl:px-8 3xl:py-4";
 
-const BTN_CSS_DEFINITION = `.btn {\n  background-color: #06b6d4;\n  color: white;\n  font-weight: 600;\n  padding: 0.75rem 1.25rem;\n  border-radius: 0.5rem;\n}`;
+const BTN_CSS_DEFINITION = `.btn {\n  background-color: #06b6d4;\n  color: white;\n  font-weight: 600;\n  font-size: 0.875rem;\n  padding: 0.75rem 1.25rem;\n  border-radius: 0.5rem;\n}`;
 
 export default function ButtonComparison() {
   const [showCss, setShowCss] = useState(false);
@@ -17,16 +17,21 @@ export default function ButtonComparison() {
           background-color: #06b6d4;
           color: white;
           font-weight: 600;
+          font-size: 0.875rem;
           padding: 0.75rem 1.25rem;
           border-radius: 0.5rem;
+        }
+        .dark .btn {
+          background-color: #0891b2;
         }
       `}</style>
 
       {/* Semantic .btn button */}
       <div>
         <button
+          type="button"
           className="btn cursor-pointer"
-          onClick={() => setShowCss(!showCss)}
+          onClick={() => setShowCss((prev) => !prev)}
         >
           Button
         </button>
@@ -39,7 +44,7 @@ export default function ButtonComparison() {
 
       {/* Tailwind utilities button */}
       <div>
-        <button className={TAILWIND_BTN_CLASSES}>Button</button>
+        <button type="button" className={TAILWIND_BTN_CLASSES}>Button</button>
         <div className="mt-4 3xl:mt-8">
           <CodeCallout classes={TAILWIND_BTN_CLASSES} />
         </div>
