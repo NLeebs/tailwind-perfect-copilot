@@ -50,7 +50,7 @@ Declared values (must be multiples of 4):
 |-------|---------|----------------|
 | column gap | `gap-6` | `3xl:gap-12` |
 | section padding | `px-8` | `3xl:px-16` |
-| button padding | `px-5 py-2.5` | `3xl:px-8 3xl:py-4` |
+| button padding | `px-5 py-3` | `3xl:px-8 3xl:py-4` |
 | demo→callout gap | `mt-4` | `3xl:mt-8` |
 | section label→content | `mt-2` | `3xl:mt-4` |
 
@@ -69,7 +69,7 @@ Source: `src/components/SlideLayout.tsx` established spacing pattern, `src/compo
 | Heading | 20px (`text-xl`) | 36px (`3xl:text-4xl`) | 600 (semibold) | 1.2 (`leading-tight`) | Column section titles (h2) |
 | Display | set by SlideLayout h1 | `3xl:text-7xl` | 700 (bold) | 1.2 | Slide title "What is Tailwind?" — inherited from @layer base gradient style, no override |
 
-Weights in use: **400** (regular) and **600** (semibold) only.
+Weights declared in this phase: **400** and **600**. Display h1 inherits 700 from existing base style — no override.
 
 CodeCallout uses 13px monospace (`text-[13px]`), `3xl:text-base` — inherited from existing component, no change needed.
 
@@ -95,7 +95,7 @@ Source: `src/components/CssTimeline.tsx` typography scale, `src/components/Slide
 - Text: `text-white`
 - Border radius: `rounded-lg`
 - Font weight: `font-semibold`
-- Padding: `px-5 py-2.5` / `3xl:px-8 3xl:py-4`
+- Padding: `px-5 py-3` / `3xl:px-8 3xl:py-4`
 - No hover state (D-08 — hover is Phase 6 scope)
 
 **Documentation card specification:**
@@ -161,6 +161,8 @@ SlideLayout main (max-w-5xl → 3xl:max-w-7xl)
 
 Two-column layout uses `grid grid-cols-2` (not flex) — simpler equal-height behavior.
 
+The semantic `.btn` button in the left column is the primary focal point — it is the only interactive element and the first teaching moment.
+
 Source: `02-CONTEXT.md` D-01 through D-14.
 
 ---
@@ -214,13 +216,13 @@ These constants must be defined once and passed to both the element and its `Cod
 
 ```
 // In ButtonComparison.tsx
-const TAILWIND_BTN_CLASSES = "bg-cyan-500 dark:bg-cyan-600 text-white font-semibold px-5 py-2.5 rounded-lg 3xl:px-8 3xl:py-4";
+const TAILWIND_BTN_CLASSES = "bg-cyan-500 dark:bg-cyan-600 text-white font-semibold px-5 py-3 rounded-lg 3xl:px-8 3xl:py-4";
 
 // In page.tsx (RSC inline card) or a separate RSC component
 const CARD_CLASSES = "bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm 3xl:p-10";
 
 // In ButtonComparison.tsx (the .btn CSS definition string for reveal)
-const BTN_CSS_DEFINITION = `.btn {\n  background-color: #06b6d4;\n  color: white;\n  font-weight: 600;\n  padding: 0.625rem 1.25rem;\n  border-radius: 0.5rem;\n}`;
+const BTN_CSS_DEFINITION = `.btn {\n  background-color: #06b6d4;\n  color: white;\n  font-weight: 600;\n  padding: 0.75rem 1.25rem;\n  border-radius: 0.5rem;\n}`;
 ```
 
 The `.btn` style block on the page (or inside the island) must produce the same visual output as `TAILWIND_BTN_CLASSES`. The `.btn` CSS definition string displayed in the CodeCallout is `BTN_CSS_DEFINITION`.
@@ -260,7 +262,7 @@ Every text element and spacing value must escalate at `3xl:` (1920px). Required 
 | Section caption | `text-sm` | `3xl:text-xl` | — |
 | Column section heading | `text-xl` | `3xl:text-4xl` | — |
 | Button text | `text-sm` | `3xl:text-xl` | — |
-| Button padding | `px-5 py-2.5` | `3xl:px-8 3xl:py-4` | — |
+| Button padding | `px-5 py-3` | `3xl:px-8 3xl:py-4` | — |
 | Card heading | `text-base font-semibold` | `3xl:text-2xl` | — |
 | Card body | `text-sm` | `3xl:text-xl` | — |
 | Card padding | `p-6` | `3xl:p-10` | — |
