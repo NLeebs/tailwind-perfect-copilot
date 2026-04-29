@@ -31,7 +31,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. `cn(classes)` is importable from `src/lib/utils.ts` and correctly merges conflicting Tailwind classes at runtime
   3. Toggling dark mode via ThemeToggle shows identical dark-mode visual results whether OS preference is light or dark — no competing `prefers-color-scheme` media query overrides the class-based variant
   4. `yarn add shiki shiki-magic-move motion clsx tailwind-merge` completes without peer-dependency errors and the app starts cleanly with `yarn dev`
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 01-01-PLAN.md — Install shared runtime libraries (clsx, tailwind-merge@^3, motion, shiki, shiki-magic-move)
+- [ ] 01-02-PLAN.md — Remove prefers-color-scheme media query from globals.css (single dark mode source of truth)
+- [ ] 01-03-PLAN.md — Create cn() utility at src/lib/utils.ts and CodeCallout RSC at src/components/CodeCallout.tsx
 **UI hint**: yes
 
 ### Phase 2: Slide 2 — What Is Tailwind
@@ -107,7 +110,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Shared Infrastructure | 0/TBD | Not started | - |
+| 1. Shared Infrastructure | 0/3 | Not started | - |
 | 2. Slide 2 — What Is Tailwind | 0/TBD | Not started | - |
 | 3. Slide 3 — Core Utility Classes | 0/TBD | Not started | - |
 | 4. Slide 4 — Responsiveness & Dark Mode | 0/TBD | Not started | - |
