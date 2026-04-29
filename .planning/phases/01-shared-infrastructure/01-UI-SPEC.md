@@ -45,7 +45,7 @@ Declared values (multiples of 4 only). Scale matches existing component usage:
 
 Exceptions:
 - CodeCallout chip horizontal padding: `px-3` (12px) at base, `3xl:px-4` (16px) at 1920px — deliberately tighter than the standard md token to keep the chip compact inline.
-- CodeCallout chip vertical padding: `py-1.5` (6px) at base, `3xl:py-2` (8px) at 1920px.
+- CodeCallout chip vertical padding: `py-1` (4px) at base, `3xl:py-2` (8px) at 1920px.
 
 ---
 
@@ -56,13 +56,11 @@ Font sizes used in this phase are confined to the CodeCallout chip. All other ty
 | Role | Base Size | 3xl Size | Weight | Line Height | Font |
 |------|-----------|----------|--------|-------------|------|
 | Chip / callout text | 13px (`text-[13px]`) | 16px (`3xl:text-base`) | 400 (regular) | 1.5 | Geist Mono (`font-mono`) |
-| Body (inherited, not re-declared here) | 16px (`text-base`) | 20px (`3xl:text-xl`) | 400 (regular) | 1.5 (`leading-relaxed`) | Geist Sans |
 | Label / caps (inherited) | 12px (`text-xs`) | 14px (`3xl:text-sm`) | 600 (semibold) | 1 | Geist Sans |
-| Heading (inherited) | 48px (`text-5xl`) | 72px (`3xl:text-7xl`) | 700 (bold) | 1.2 (`leading-tight`) | Geist Sans |
 
 Source: CssTimeline.tsx, SlideLayout.tsx, NavCard.tsx — scanned for all existing size/weight declarations.
 
-Maximum weights used in this codebase: regular (400) and semibold (600) for UI chrome; bold (700) for h1 only. CodeCallout uses regular (400) only.
+Weights declared by Phase 1: regular (400) for chip text; semibold (600) for inherited label/caps chrome. The h1 bold (700) weight is pre-existing infrastructure, not introduced by this phase, and is excluded from this table.
 
 ---
 
@@ -133,7 +131,7 @@ Single `<p>` element. No wrapper div. Callers manage layout context.
 // Base (all viewports)
 inline-block font-mono text-[13px] leading-relaxed
 bg-slate-100 text-slate-700 border border-slate-200
-rounded-lg px-3 py-1.5
+rounded-lg px-3 py-1
 whitespace-pre-wrap break-all
 
 // Dark mode (class-based @custom-variant, NOT prefers-color-scheme)
@@ -204,7 +202,7 @@ Per CLAUDE.md and QA-01: all text and spacing must include `3xl:` escalations fo
 
 CodeCallout chip escalations declared above:
 - Text: `text-[13px]` → `3xl:text-base` (16px)
-- Padding: `px-3 py-1.5` → `3xl:px-4 3xl:py-2`
+- Padding: `px-3 py-1` → `3xl:px-4 3xl:py-2`
 - Border radius: `rounded-lg` → `3xl:rounded-xl`
 
 ---
