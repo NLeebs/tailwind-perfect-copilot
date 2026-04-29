@@ -13,8 +13,8 @@
 
 ### Slide 2 — What Is Tailwind
 
-- [ ] **S2-01**: Slide renders a side-by-side button comparison: the left button uses a semantic class (`.btn { ... }` in a style block), the right button uses Tailwind utilities — identical visual output, class callouts highlight the difference
-- [ ] **S2-02**: Slide renders a "class soup is documentation" section showing a Tailwind card component whose class list is displayed as an inline callout, narrating that reading the classes tells you everything about the element without opening a separate file
+- [x] **S2-01**: Slide renders a side-by-side button comparison: the left button uses a semantic class (`.btn { ... }` in a style block), the right button uses Tailwind utilities — identical visual output, class callouts highlight the difference
+- [x] **S2-02**: Slide renders a "class soup is documentation" section showing a Tailwind card component whose class list is displayed as an inline callout, narrating that reading the classes tells you everything about the element without opening a separate file
 
 ### Slide 3 — Core Utility Classes
 
@@ -76,8 +76,8 @@
 | INFRA-01 | Phase 1 | Pending |
 | INFRA-02 | Phase 1 | Pending |
 | INFRA-03 | Phase 1 | Pending |
-| S2-01 | Phase 2 | Pending |
-| S2-02 | Phase 2 | Pending |
+| S2-01 | Phase 2 | Complete |
+| S2-02 | Phase 2 | Complete |
 | S3-01 | Phase 3 | Pending |
 | S3-02 | Phase 3 | Pending |
 | S4-01 | Phase 4 | Pending |
