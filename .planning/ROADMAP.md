@@ -12,7 +12,7 @@ Build five stub slides (Slides 2–6) into fully interactive demo pages, each sh
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Shared Infrastructure** - CodeCallout component, cn() utility, library installs, and dark mode conflict fix
+- [x] **Phase 1: Shared Infrastructure** - CodeCallout component, cn() utility, library installs, and dark mode conflict fix
 - [ ] **Phase 2: Slide 2 — What Is Tailwind** - Side-by-side semantic vs. utility comparison with inline callouts
 - [ ] **Phase 3: Slide 3 — Core Utility Classes** - Progressive card-building demo and flex vs. grid comparison
 - [ ] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
@@ -34,7 +34,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 - [x] 01-01-PLAN.md — Install shared runtime libraries (clsx, tailwind-merge@^3, motion, shiki, shiki-magic-move)
 - [x] 01-02-PLAN.md — Remove prefers-color-scheme media query from globals.css (single dark mode source of truth)
-- [ ] 01-03-PLAN.md — Create cn() utility at src/lib/utils.ts and CodeCallout RSC at src/components/CodeCallout.tsx
+- [x] 01-03-PLAN.md — Create cn() utility at src/lib/utils.ts and CodeCallout RSC at src/components/CodeCallout.tsx
 **UI hint**: yes
 
 ### Phase 2: Slide 2 — What Is Tailwind
@@ -110,7 +110,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Shared Infrastructure | 2/3 | In Progress | - |
+| 1. Shared Infrastructure | 3/3 | Complete | 2026-04-29 |
 | 2. Slide 2 — What Is Tailwind | 0/TBD | Not started | - |
 | 3. Slide 3 — Core Utility Classes | 0/TBD | Not started | - |
 | 4. Slide 4 — Responsiveness & Dark Mode | 0/TBD | Not started | - |
