@@ -29,7 +29,7 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 ### Active
 
 - ✓ **Slide 2 — What Is Tailwind**: Semantic vs. utility button comparison + single-source card callout — validated Phase 2
-- [ ] **Slide 3 — Utility Classes**: Interactive React component examples demonstrating core utility classes (layout, spacing, typography, color, flexbox, grid)
+- ✓ **Slide 3 — Core Utility Classes**: CardBuilder 6-step progressive card island (STEPS lookup table, TDD) + FlexGridComparison RSC (single-source consts) — validated Phase 3
 - [ ] **Slide 4 — Responsiveness & Dark Mode**: Live demos that respond to viewport changes and toggle between light/dark — with callouts showing the `sm:`, `md:`, `dark:` prefixes
 - [ ] **Slide 5 — Customizing Tailwind**: Examples of custom theme tokens, custom utility classes, and custom animations defined in globals.css
 - [ ] **Slide 6 — Conditional Styling**: Interactive React components that change appearance based on state (hover, focus, active, toggled) with inline `cn()` / ternary pattern callouts
@@ -92,4 +92,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-29 — Phase 2 complete*
+*Last updated: 2026-04-30 — Phase 3 complete*
