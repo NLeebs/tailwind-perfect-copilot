@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-04-28)
 ## Current Position
 
 Phase: 4 of 7 (Slide 4 — Responsiveness & Dark Mode)
-Plan: 0 of TBD in current phase
-Status: Phase 4 context gathered. Ready to plan Phase 4.
-Last activity: 2026-04-30 — Phase 4 context captured (interactive tabs responsive demo, rich RSC dark mode card, stacked variants embedded in dark mode section)
+Plan: 0 of 3 in current phase
+Status: Ready to execute Phase 4. 3 plans in 2 waves.
+Last activity: 2026-04-30 — Phase 4 planned (3 plans: ResponsiveDemo island, page.tsx stub replacement, build verification)
 
 Progress: [███████░░░] 43%
 
@@ -56,7 +56,7 @@ None yet.
 ### Blockers/Concerns
 
 - Phase 5: Shiki dual-theme CSS injection with `@custom-variant dark` should be prototyped early — selector specificity with `html.dark .shiki` is untested against this project's setup
-- Phase 4: Static side-by-side responsive cards vs. constrained-container approach — final design decision should be validated with a quick prototype before full build
+- Phase 4: Resolved — interactive tabs approach chosen (discuss-phase D-01); constrained container with LAYOUT_CLASSES map drives tab → layout switching
 
 ## Deferred Items
 
