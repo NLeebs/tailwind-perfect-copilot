@@ -11,6 +11,13 @@ const LAYOUT_CLASSES: Record<Tab, string> = {
   desktop: "grid grid-cols-3 gap-4",
 };
 
+// Prefixed forms shown in the CodeCallout — teaches the responsive syntax
+const CALLOUT_CLASSES: Record<Tab, string> = {
+  mobile: "flex flex-col gap-4",
+  tablet: "md:flex-row",
+  desktop: "lg:grid-cols-3",
+};
+
 const TABS: Tab[] = ["mobile", "tablet", "desktop"];
 
 const TAB_LABELS: Record<Tab, string> = {
@@ -77,7 +84,7 @@ export default function ResponsiveDemo() {
         <p className="text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base mb-2">
           LAYOUT CLASSES
         </p>
-        <CodeCallout classes={LAYOUT_CLASSES[activeTab]} />
+        <CodeCallout classes={CALLOUT_CLASSES[activeTab]} />
       </div>
     </div>
   );
