@@ -1,7 +1,7 @@
 ---
 phase: 4
 slug: slide-4-responsiveness-dark-mode
-status: draft
+status: approved
 shadcn_initialized: false
 preset: none
 created: 2026-04-30
@@ -48,6 +48,7 @@ Tailwind spacing tokens used in this phase (all multiples of 4px):
 Exceptions:
 - Profile card avatar circles: `size-12 3xl:size-16` (48px / 64px) — touch-target-equivalent, not a spacing token
 - Info card outer padding: `p-8 3xl:p-12` (32px / 48px) — wider to support the rich multi-zone layout
+- Badge pill vertical padding: `py-0.5` (2px) — sub-4px acceptable for pill shape aesthetic; standard badge pattern
 
 Source: CONTEXT.md D-09; utility-classes/page.tsx spacer pattern; CardBuilder.tsx nav gap pattern
 
@@ -70,7 +71,7 @@ Notes:
 - Tab button labels: `text-sm font-semibold 3xl:text-lg` — same as CardBuilder nav buttons
 - Profile card name: `text-sm font-semibold text-slate-900 dark:text-white 3xl:text-base`
 - Profile card role: `text-xs text-slate-500 dark:text-slate-400 3xl:text-sm`
-- Info card title: `text-lg font-semibold text-slate-900 dark:text-white 3xl:text-2xl`
+- Info card title: `text-xl font-semibold text-slate-900 dark:text-white 3xl:text-2xl`
 - Info card body text: `text-sm text-slate-600 dark:text-slate-400 3xl:text-lg`
 - Badge text: `text-xs font-semibold 3xl:text-sm`
 
@@ -130,6 +131,8 @@ Source: CONTEXT.md D-04, D-07, specifics; CLAUDE.md color palette; CardBuilder.t
 
 ### 1. ResponsiveDemo (Client Island — src/components/ResponsiveDemo.tsx)
 
+**Primary visual anchor:** The tab button row with active state highlight (cyan-500 ring) at the top of the demo container.
+
 **State:** `activeTab: 'mobile' | 'tablet' | 'desktop'` via `useState`. Default: `'mobile'`.
 
 **Tab button row:**
@@ -178,6 +181,8 @@ Sample profile content:
 
 ### 2. DarkModeCard (RSC — inline in page.tsx or src/components/DarkModeCard.tsx)
 
+**Primary visual anchor:** The full-width info card with its header/body/action zones visibly shifting on dark mode toggle.
+
 Pure RSC — no `useState`. ThemeToggle on `<html>` drives all dark: variants automatically.
 
 **Card structure (top-to-bottom zones):**
@@ -187,7 +192,7 @@ Outer wrapper:  border border-slate-200 dark:border-slate-700 rounded-2xl
                 overflow-hidden shadow-sm
 
 Header zone:    bg-slate-100 dark:bg-slate-800 px-8 py-5 3xl:px-12 3xl:py-7
-  - Title:      text-lg font-semibold text-slate-900 dark:text-white 3xl:text-2xl
+  - Title:      text-xl font-semibold text-slate-900 dark:text-white 3xl:text-2xl
   - Badge:      bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200
                 text-xs font-semibold px-2 py-0.5 rounded-full 3xl:text-sm
 
@@ -262,7 +267,7 @@ Every component in this phase must include `3xl:` escalations. Minimum requireme
 | Profile card padding | `p-4` | `3xl:p-6` |
 | Info card header padding | `px-8 py-5` | `3xl:px-12 3xl:py-7` |
 | Info card body padding | `px-8 py-6` | `3xl:px-12 3xl:py-8` |
-| Info card title | `text-lg` | `3xl:text-2xl` |
+| Info card title | `text-xl` | `3xl:text-2xl` |
 | Info card body text | `text-sm` | `3xl:text-lg` |
 | Badge | `text-xs` | `3xl:text-sm` |
 | Action button | `text-sm px-5 py-2` | `3xl:text-base 3xl:px-7 3xl:py-3` |
@@ -380,11 +385,11 @@ Rules enforced by this spec:
 
 ## Checker Sign-Off
 
-- [ ] Dimension 1 Copywriting: PASS
-- [ ] Dimension 2 Visuals: PASS
-- [ ] Dimension 3 Color: PASS
-- [ ] Dimension 4 Typography: PASS
-- [ ] Dimension 5 Spacing: PASS
-- [ ] Dimension 6 Registry Safety: PASS
+- [x] Dimension 1 Copywriting: PASS
+- [x] Dimension 2 Visuals: PASS
+- [x] Dimension 3 Color: PASS
+- [x] Dimension 4 Typography: PASS
+- [x] Dimension 5 Spacing: PASS
+- [x] Dimension 6 Registry Safety: PASS
 
-**Approval:** pending
+**Approval:** approved 2026-04-30
