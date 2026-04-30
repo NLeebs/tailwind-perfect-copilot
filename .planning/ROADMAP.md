@@ -95,7 +95,15 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. The slide shows globals.css content (Shiki-rendered, syntax-highlighted) alongside a component using `bg-brand-500` — where `--color-brand-500` is defined in an `@theme` block in globals.css — demonstrating the token-to-utility pipeline visually
   2. The slide shows a `@utility scrollbar-hidden` custom utility definition, with an explicit callout naming the v3 equivalent (`@layer utilities`), readable for attendees who have seen v3 tutorials
   3. The slide shows the existing `@layer base` h1 gradient rule as a live artifact, with a callout explaining that every slide title inherits these styles without an additional class on the element
-**Plans**: TBD
+**Plans**: 3 plans
+**Wave 1** *(parallel)*
+- [ ] 05-01-PLAN.md — Create Shiki Vitest mock + alias and ShikiBlock async RSC component
+- [ ] 05-02-PLAN.md — Add --color-brand-500 token to plain @theme and @utility scrollbar-hidden rule to globals.css; yarn build verify
+
+**Wave 2** *(blocked on Wave 1 completion)*
+- [ ] 05-03-PLAN.md — Replace customizing-tailwind/page.tsx stub with three-section slide; update slide-pages.test.tsx (drop "05" from stubCases, add S5-02/S5-03 content assertions); yarn test --run + yarn build phase gate
+
+**Cross-cutting constraints:** page.tsx stays RSC (no "use client"); ShikiBlock is async RSC; --color-brand-500 must go in plain @theme {} (not @theme inline {}); !important is mandatory in the .dark .shiki override CSS; all snippet strings are static module-scope constants; all 3xl: escalations from TV Readability Contract required.
 **UI hint**: yes
 
 ### Phase 6: Slide 6 — Conditional Styling
@@ -131,6 +139,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 2. Slide 2 — What Is Tailwind | 1/1 | Complete | 2026-04-29 |
 | 3. Slide 3 — Core Utility Classes | 3/3 | Complete | 2026-04-30 |
 | 4. Slide 4 — Responsiveness & Dark Mode | 3/3 | Complete | 2026-04-30 |
-| 5. Slide 5 — Customizing Tailwind | 0/TBD | Not started | - |
+| 5. Slide 5 — Customizing Tailwind | 0/3 | In progress | - |
 | 6. Slide 6 — Conditional Styling | 0/TBD | Not started | - |
 | 7. TV Readability & Quality Pass | 0/TBD | Not started | - |
