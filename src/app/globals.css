@@ -44,3 +44,7 @@ body {
   --animate-reveal-up: reveal-up 0.7s ease-out both;
   --color-brand-500: #3b82f6;
 }
+
+@utility scrollbar-hidden {
+  scrollbar-width: none;
+}
