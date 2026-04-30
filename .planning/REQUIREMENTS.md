@@ -29,9 +29,9 @@
 
 ### Slide 5 — Customizing Tailwind
 
-- [ ] **S5-01**: Slide shows the `globals.css` file content on-screen alongside a component using a `--color-brand-500` token defined in `@theme`, demonstrating that the class `bg-brand-500` is generated automatically from the token
-- [ ] **S5-02**: Slide shows a `@utility scrollbar-hidden` custom utility definition, with an explicit callout naming the v3 equivalent (`@layer utilities`) so attendees who've seen v3 content understand the mapping
-- [ ] **S5-03**: Slide shows the existing `@layer base` h1 gradient rule as a live artifact, with a callout explaining that every slide title inherits these styles without an additional class
+- [x] **S5-01**: Slide shows the `globals.css` file content on-screen alongside a component using a `--color-brand-500` token defined in `@theme`, demonstrating that the class `bg-brand-500` is generated automatically from the token
+- [x] **S5-02**: Slide shows a `@utility scrollbar-hidden` custom utility definition, with an explicit callout naming the v3 equivalent (`@layer utilities`) so attendees who've seen v3 content understand the mapping
+- [x] **S5-03**: Slide shows the existing `@layer base` h1 gradient rule as a live artifact, with a callout explaining that every slide title inherits these styles without an additional class
 
 ### Slide 6 — Conditional Styling
 
@@ -83,9 +83,9 @@
 | S4-01 | Phase 4 | Pending |
 | S4-02 | Phase 4 | Pending |
 | S4-03 | Phase 4 | Pending |
-| S5-01 | Phase 5 | Pending |
-| S5-02 | Phase 5 | Pending |
-| S5-03 | Phase 5 | Pending |
+| S5-01 | Phase 5 | Complete |
+| S5-02 | Phase 5 | Complete |
+| S5-03 | Phase 5 | Complete |
 | S6-01 | Phase 6 | Pending |
 | S6-02 | Phase 6 | Pending |
 | S6-03 | Phase 6 | Pending |

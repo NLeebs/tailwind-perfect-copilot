@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-28)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** Phase 5 — Slide 5: Customizing Tailwind (Ready to execute)
+**Current focus:** Phase 6 — Slide 6: Conditional Styling (Phase 5 complete)
 
 ## Current Position
 
-Phase: 5 of 7 (Slide 5 — Customizing Tailwind)
-Plan: 0 of 3 in current phase
-Status: Phase 5 planned. Ready to execute (3 plans in 2 waves).
-Last activity: 2026-04-30 — Phase 5 plans created (Shiki foundation, globals.css additions, slide page)
+Phase: 6 of 7 (Slide 6 — Conditional Styling)
+Plan: 0 of TBD in current phase
+Status: Phase 5 complete. Phase 6 not yet planned.
+Last activity: 2026-04-30 — Phase 5 complete (Shiki foundation, globals.css additions, three-section slide page)
 
-Progress: [████████░░] 57%
+Progress: [█████████░] 71%
 
 ## Performance Metrics
 
@@ -69,5 +69,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-04-30
-Stopped at: Phase 3 complete. CardBuilder island (6-step TDD), FlexGridComparison RSC, utility-classes page wired. All 14 must-haves verified. Advancing to Phase 4.
+Stopped at: Phase 5 complete. Shiki mock + ShikiBlock RSC, globals.css @theme token + @utility, three-section customizing-tailwind slide. 61 tests pass, yarn build exits 0. Advancing to Phase 6.
 Resume file: none
