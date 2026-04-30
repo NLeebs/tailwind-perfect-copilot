@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-28)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** Phase 4 — Slide 4: Responsiveness & Dark Mode
+**Current focus:** Phase 5 — Slide 5: Customizing Tailwind
 
 ## Current Position
 
-Phase: 4 of 7 (Slide 4 — Responsiveness & Dark Mode)
-Plan: 0 of 3 in current phase
-Status: Ready to execute Phase 4. 3 plans in 2 waves.
-Last activity: 2026-04-30 — Phase 4 planned (3 plans: ResponsiveDemo island, page.tsx stub replacement, build verification)
+Phase: 5 of 7 (Slide 5 — Customizing Tailwind)
+Plan: 0 of TBD in current phase
+Status: Phase 4 complete. Ready to discuss/plan Phase 5.
+Last activity: 2026-04-30 — Phase 4 complete (3/3 plans; ResponsiveDemo island, full slide page, build verified; CALLOUT_CLASSES gap fixed; layout.tsx hydration fix)
 
-Progress: [███████░░░] 43%
+Progress: [████████░░] 57%
 
 ## Performance Metrics
 

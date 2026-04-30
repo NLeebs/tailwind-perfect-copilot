@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Shared Infrastructure** - CodeCallout component, cn() utility, library installs, and dark mode conflict fix
 - [x] **Phase 2: Slide 2 — What Is Tailwind** - Side-by-side semantic vs. utility comparison with inline callouts
 - [x] **Phase 3: Slide 3 — Core Utility Classes** - Progressive card-building demo and flex vs. grid comparison
-- [ ] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
+- [x] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
 - [ ] **Phase 5: Slide 5 — Customizing Tailwind** - @theme token pipeline, @utility, and @layer base callouts with Shiki
 - [ ] **Phase 6: Slide 6 — Conditional Styling** - Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos
 - [ ] **Phase 7: TV Readability & Quality Pass** - 1920px audit, reduced-motion check, build smoke test
