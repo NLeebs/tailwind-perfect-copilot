@@ -59,8 +59,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. No dynamic class string interpolation is used — all class strings are complete literals in lookup-table maps (verified by a clean `yarn build`)
 **Plans**: 3 plans
 **Wave 1** *(parallel)*
-- [ ] 03-01-PLAN.md — Create CardBuilder client island with 6-step navigator and progressive card classes
-- [ ] 03-02-PLAN.md — Create FlexGridComparison RSC with FLEX_CLASSES/GRID_CLASSES single-source consts
+- [x] 03-01-PLAN.md — Create CardBuilder client island with 6-step navigator and progressive card classes
+- [x] 03-02-PLAN.md — Create FlexGridComparison RSC with FLEX_CLASSES/GRID_CLASSES single-source consts
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 03-03-PLAN.md — Replace utility-classes/page.tsx stub with full two-section layout; yarn build verify
@@ -121,7 +121,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Shared Infrastructure | 3/3 | Complete | 2026-04-29 |
 | 2. Slide 2 — What Is Tailwind | 1/1 | Complete | 2026-04-29 |
-| 3. Slide 3 — Core Utility Classes | 0/3 | Ready to execute | - |
+| 3. Slide 3 — Core Utility Classes | 2/3 | In progress | - |
 | 4. Slide 4 — Responsiveness & Dark Mode | 0/TBD | Not started | - |
 | 5. Slide 5 — Customizing Tailwind | 0/TBD | Not started | - |
 | 6. Slide 6 — Conditional Styling | 0/TBD | Not started | - |
