@@ -5,16 +5,16 @@
 See: .planning/PROJECT.md (updated 2026-04-28)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** Phase 3 — Slide 3: Core Utility Classes
+**Current focus:** Phase 4 — Slide 4: Responsiveness & Dark Mode
 
 ## Current Position
 
-Phase: 3 of 7 (Slide 3 — Core Utility Classes)
-Plan: 0 of 3 in current phase
-Status: Ready to execute — 3 plans in 2 waves
-Last activity: 2026-04-30 — Phase 3 planned (CardBuilder island, FlexGridComparison RSC, page wiring — 3 plans, 2 waves)
+Phase: 4 of 7 (Slide 4 — Responsiveness & Dark Mode)
+Plan: 0 of TBD in current phase
+Status: Phase 3 complete. Ready to discuss/plan Phase 4.
+Last activity: 2026-04-30 — Phase 3 complete (CardBuilder, FlexGridComparison, page wiring — 3/3 plans, verified 14/14)
 
-Progress: [█████░░░░░] 29%
+Progress: [███████░░░] 43%
 
 ## Performance Metrics
 
@@ -68,6 +68,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-29
-Stopped at: Phase 2 complete. ButtonComparison island and what-is-tailwind page built and verified. Advancing to Phase 3.
+Last session: 2026-04-30
+Stopped at: Phase 3 complete. CardBuilder island (6-step TDD), FlexGridComparison RSC, utility-classes page wired. All 14 must-haves verified. Advancing to Phase 4.
 Resume file: none

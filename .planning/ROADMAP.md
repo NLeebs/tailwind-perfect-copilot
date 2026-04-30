@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Shared Infrastructure** - CodeCallout component, cn() utility, library installs, and dark mode conflict fix
 - [x] **Phase 2: Slide 2 — What Is Tailwind** - Side-by-side semantic vs. utility comparison with inline callouts
-- [ ] **Phase 3: Slide 3 — Core Utility Classes** - Progressive card-building demo and flex vs. grid comparison
+- [x] **Phase 3: Slide 3 — Core Utility Classes** - Progressive card-building demo and flex vs. grid comparison
 - [ ] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
 - [ ] **Phase 5: Slide 5 — Customizing Tailwind** - @theme token pipeline, @utility, and @layer base callouts with Shiki
 - [ ] **Phase 6: Slide 6 — Conditional Styling** - Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos
@@ -121,7 +121,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Shared Infrastructure | 3/3 | Complete | 2026-04-29 |
 | 2. Slide 2 — What Is Tailwind | 1/1 | Complete | 2026-04-29 |
-| 3. Slide 3 — Core Utility Classes | 3/3 | In progress | - |
+| 3. Slide 3 — Core Utility Classes | 3/3 | Complete | 2026-04-30 |
 | 4. Slide 4 — Responsiveness & Dark Mode | 0/TBD | Not started | - |
 | 5. Slide 5 — Customizing Tailwind | 0/TBD | Not started | - |
 | 6. Slide 6 — Conditional Styling | 0/TBD | Not started | - |
