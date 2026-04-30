@@ -6,9 +6,9 @@ import ResponsivenessDarkMode from "@/app/responsiveness-dark-mode/page";
 import CustomizingTailwind from "@/app/customizing-tailwind/page";
 import ConditionalStyling from "@/app/conditional-styling/page";
 
-const cases = [
+const allCases = [
   { Component: WhatIsTailwind, number: "02", title: "What is Tailwind?" },
-  { Component: UtilityClasses, number: "03", title: "Tailwind Utility Classes" },
+  { Component: UtilityClasses, number: "03", title: "Core Utility Classes" },
   {
     Component: ResponsivenessDarkMode,
     number: "04",
@@ -18,8 +18,13 @@ const cases = [
   { Component: ConditionalStyling, number: "06", title: "Conditional Styling" },
 ] as const;
 
-describe("Empty slide pages", () => {
-  cases.forEach(({ Component, number, title }) => {
+// Pages that have not yet been implemented — still show the stub placeholder
+const stubCases = allCases.filter(({ number }) =>
+  ["04", "05", "06"].includes(number)
+);
+
+describe("Slide pages", () => {
+  allCases.forEach(({ Component, number, title }) => {
     describe(title, () => {
       it(`renders slide number ${number}`, () => {
         render(<Component />);
@@ -32,8 +37,12 @@ describe("Empty slide pages", () => {
           screen.getByRole("heading", { level: 1, name: title })
         ).toBeInTheDocument();
       });
+    });
+  });
 
-      it("shows the content coming soon placeholder", () => {
+  describe("Stub pages (content coming soon)", () => {
+    stubCases.forEach(({ Component, title }) => {
+      it(`${title} shows the content coming soon placeholder`, () => {
         render(<Component />);
         expect(screen.getByText(/content coming soon/i)).toBeInTheDocument();
       });
