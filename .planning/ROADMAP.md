@@ -63,7 +63,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] 03-02-PLAN.md — Create FlexGridComparison RSC with FLEX_CLASSES/GRID_CLASSES single-source consts
 
 **Wave 2** *(blocked on Wave 1 completion)*
-- [ ] 03-03-PLAN.md — Replace utility-classes/page.tsx stub with full two-section layout; yarn build verify
+- [x] 03-03-PLAN.md — Replace utility-classes/page.tsx stub with full two-section layout; yarn build verify
 
 **Cross-cutting constraints:** All class strings must be complete static literals — no dynamic interpolation anywhere (verified by `yarn build` in all three plans).
 **UI hint**: yes
@@ -121,7 +121,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 |-------|----------------|--------|-----------|
 | 1. Shared Infrastructure | 3/3 | Complete | 2026-04-29 |
 | 2. Slide 2 — What Is Tailwind | 1/1 | Complete | 2026-04-29 |
-| 3. Slide 3 — Core Utility Classes | 2/3 | In progress | - |
+| 3. Slide 3 — Core Utility Classes | 3/3 | In progress | - |
 | 4. Slide 4 — Responsiveness & Dark Mode | 0/TBD | Not started | - |
 | 5. Slide 5 — Customizing Tailwind | 0/TBD | Not started | - |
 | 6. Slide 6 — Conditional Styling | 0/TBD | Not started | - |
