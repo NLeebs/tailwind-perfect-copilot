@@ -19,10 +19,29 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "next/link": path.resolve(__dirname, "./src/test/mocks/next-link.tsx"),
-      "shiki": path.resolve(__dirname, "./src/test/mocks/shiki.ts"),
-    },
+    alias: [
+      {
+        find: "@/components/ShikiBlock",
+        replacement: path.resolve(
+          __dirname,
+          "./src/test/mocks/ShikiBlock.tsx"
+        ),
+      },
+      {
+        find: "@",
+        replacement: path.resolve(__dirname, "./src"),
+      },
+      {
+        find: "next/link",
+        replacement: path.resolve(
+          __dirname,
+          "./src/test/mocks/next-link.tsx"
+        ),
+      },
+      {
+        find: "shiki",
+        replacement: path.resolve(__dirname, "./src/test/mocks/shiki.ts"),
+      },
+    ],
   },
 });

@@ -20,7 +20,7 @@ const allCases = [
 
 // Pages that have not yet been implemented — still show the stub placeholder
 const stubCases = allCases.filter(({ number }) =>
-  ["04", "05", "06"].includes(number)
+  ["06"].includes(number)
 );
 
 describe("Slide pages", () => {
@@ -47,5 +47,17 @@ describe("Slide pages", () => {
         expect(screen.getByText(/content coming soon/i)).toBeInTheDocument();
       });
     });
+  });
+});
+
+describe("Customizing Tailwind content", () => {
+  it("renders the @utility scrollbar-hidden v3 equivalent callout (S5-02)", () => {
+    render(<CustomizingTailwind />);
+    expect(screen.getByText(/scrollbar-hidden/i)).toBeInTheDocument();
+  });
+
+  it("renders the live h1 demo for the @layer base section (S5-03)", () => {
+    render(<CustomizingTailwind />);
+    expect(screen.getByText(/Live h1 Demo/i)).toBeInTheDocument();
   });
 });
