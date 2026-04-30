@@ -79,7 +79,7 @@ export default function ResponsiveDemo() {
         ))}
       </div>
 
-      {/* CodeCallout strip — single-source: same LAYOUT_CLASSES[activeTab] drives container + callout */}
+      {/* CodeCallout strip — CALLOUT_CLASSES shows breakpoint-prefixed syntax; LAYOUT_CLASSES drives actual container className */}
       <div className="mt-6 3xl:mt-8">
         <p className="text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base mb-2">
           LAYOUT CLASSES
