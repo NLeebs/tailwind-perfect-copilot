@@ -42,4 +42,9 @@ body {
   --breakpoint-3xl: 1920px;
   --breakpoint-4xl: 2560px;
   --animate-reveal-up: reveal-up 0.7s ease-out both;
+  --color-brand-500: #3b82f6;
+}
+
+@utility scrollbar-hidden {
+  scrollbar-width: none;
 }
