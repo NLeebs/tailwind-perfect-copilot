@@ -1,7 +1,8 @@
 ---
 phase: 3
 slug: slide-3-core-utility-classes
-status: draft
+status: approved
+reviewed_at: 2026-04-30
 shadcn_initialized: false
 preset: none
 created: 2026-04-30
@@ -36,7 +37,7 @@ Declared values (Tailwind spacing units, multiples of 4):
 |-------|---------------|---------|-------|
 | xs | `gap-1` / `p-1` | 4px | Step node inner gaps, icon-to-text spacing |
 | sm | `gap-2` / `p-2` / `mt-2` | 8px | Label spacing below step nodes, callout chip internal gaps |
-| md | `gap-4` / `p-4` / `mt-4` | 16px | Default element spacing within card, gap between flex/grid children |
+| md | `gap-4` / `p-4` / `mt-4` | 16px | Default element spacing within card, gap between flex/grid children, navigator row gap, CodeCallout top margin |
 | lg | `gap-6` / `p-6` / `mt-6` | 24px | Card internal padding, column gap in two-column grid |
 | xl | `gap-8` / `mt-8` | 32px | Step navigator bottom margin, section gap |
 | 2xl | `py-12` / `mt-12` | 48px | Vertical separation between card-builder and flex/grid sections |
@@ -44,13 +45,17 @@ Declared values (Tailwind spacing units, multiples of 4):
 
 **3xl: escalations (1920px breakpoint):**
 - Column gap: `gap-6 3xl:gap-12`
-- Card padding: `p-6 3xl:p-10`
+- Card padding: `p-6 3xl:p-8`
 - Step navigator node size: `size-10 3xl:size-16`
 - Section spacing: `mt-12 3xl:mt-20`
-- Flex/grid child box size: `size-16 3xl:size-24`
-- Navigator row gap: `gap-3 3xl:gap-5`
+- Flex/grid child box size: `size-16 3xl:size-24` — TV-scale legibility override: 96px ensures numbered boxes remain clearly legible at 1920px display distance; consistent with `size-10` click-target justification for step nodes
+- Navigator row gap: `gap-4 3xl:gap-4`
+- Section separator (flex/grid heading top margin): `mt-16 3xl:mt-24` — TV-scale section break: 96px vertical gap creates clear visual separation between the two demo sections at large display distances
 
-Exceptions: Step navigator nodes use `size-10` (40px) at default, `size-16` (64px) at 3xl — intentionally larger than the 8-point scale to hit a comfortable click target.
+Exceptions:
+- Step navigator nodes use `size-10` (40px) at default, `size-16` (64px) at 3xl — intentionally larger than the 8-point scale to hit a comfortable click target.
+- `size-24` (96px) at 3xl for flex/grid boxes — TV-scale legibility override (see above).
+- `mt-24` (96px) at 3xl for section separator — TV-scale section break (see above).
 
 ---
 
@@ -58,18 +63,21 @@ Exceptions: Step navigator nodes use `size-10` (40px) at default, `size-16` (64p
 
 All type is Geist Sans. The `h1` is globally styled in `@layer base` (gradient clip, bold, tracking-tight) — do not add extra classes to `<h1>`.
 
+**External dependencies (not part of this phase's declared scale):**
+- `text-5xl` / `3xl:text-7xl` — SlideLayout h1, globally defined in `@layer base`. Fixed external; do not redeclare.
+- `text-[13px]` / `3xl:text-base` — CodeCallout.tsx monospace chip. Fixed external component; do not redeclare.
+
+**Declared scale for this phase (3 sizes, 2 weights):**
+
 | Role | Tailwind Class | px Equiv | Weight | Line Height | 3xl Escalation | Source |
 |------|---------------|---------|--------|-------------|---------------|--------|
-| Slide h1 | `text-5xl` | 48px | 700 (bold) | 1.2 (tight) | `3xl:text-7xl` (72px) | SlideLayout (inherited) |
 | Section heading (demo labels) | `text-xl` | 20px | 600 (semibold) | 1.2 | `3xl:text-3xl` | What-is-Tailwind pattern |
-| Body / descriptions | `text-sm` | 14px | 400 (normal) | 1.625 (relaxed) | `3xl:text-xl` | What-is-Tailwind pattern |
-| Overline labels | `text-xs` | 12px | 600 (semibold) | N/A (single line) | `3xl:text-base` | SlideLayout nav + Phase 2 |
-| CodeCallout mono | `text-[13px]` | 13px | 400 (normal) | 1.625 (relaxed) | `3xl:text-base` | CodeCallout.tsx (locked) |
-| Step node number | `text-sm` | 14px | 600 (semibold) | N/A | `3xl:text-xl` | CONTEXT.md D-04 |
-| Step node category label | `text-xs` | 12px | 400 (normal) | N/A | `3xl:text-sm` | CONTEXT.md D-04 |
-| Flex/grid box number | `text-lg` | 18px | 700 (bold) | N/A | `3xl:text-2xl` | default |
+| Body / descriptions + step node numbers | `text-sm` | 14px | 400 (normal) for body; 600 (semibold) for step numbers | 1.625 (relaxed) for body; N/A for step numbers | `3xl:text-xl` | What-is-Tailwind pattern + CONTEXT.md D-04 |
+| Overline labels + step node category labels + box numbers | `text-xs` | 12px | 600 (semibold) for overlines + box numbers; 400 (normal) for category labels | N/A (single line) | `3xl:text-base` for overlines; `3xl:text-sm` for category labels | SlideLayout nav + Phase 2 + collapsed from text-lg |
 
-Font weights used: **400 (normal)** and **600 (semibold)** — two weights maximum. `font-bold` (700) is reserved for box numbers only to maintain visual contrast in small colored squares.
+Font weights declared: **400 (normal)** and **600 (semibold)** — two weights maximum. `font-bold` (700) is NOT used anywhere in this phase. Box numbers use `text-xs font-semibold`; colored backgrounds provide sufficient visual contrast without a third weight.
+
+**Box number justification:** Box numbers (1, 2, 3) previously declared at `text-lg font-bold`. Collapsed to `text-xs font-semibold` — the colored backgrounds (`bg-violet-200`, `bg-sky-200`, `bg-emerald-200`) provide sufficient contrast at box size `size-16` (3xl: `size-24`). No third weight needed.
 
 ---
 
@@ -133,7 +141,7 @@ const STEPS: StepConfig[] = [
 | 2 | Typo | `"w-full max-w-sm p-6 text-sm font-semibold"` | `"text-sm font-semibold"` |
 | 3 | Color | `"w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white"` | `"bg-white dark:bg-slate-900 text-slate-900 dark:text-white"` |
 | 4 | Borders | `"w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm"` | `"border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm"` |
-| 5 | Flex | `"w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col gap-3"` | `"flex flex-col gap-3"` |
+| 5 | Flex | `"w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col gap-4"` | `"flex flex-col gap-4"` |
 
 **Card content (Claude's discretion):**
 - Heading text: `"Tailwind Card"`
@@ -145,9 +153,9 @@ const STEPS: StepConfig[] = [
 [◄ Prev]  [1 Layout] [2 Spacing] [3 Typo] [4 Color] [5 Borders] [6 Flex]  [Next ►]
 ```
 - Full-width row above the card/callout two-column grid
-- `flex items-center justify-between gap-3 mb-8 3xl:mb-12`
+- `flex items-center justify-between gap-4 mb-8 3xl:mb-12`
 - Prev/Next buttons: `flex items-center gap-1 text-sm font-semibold px-4 py-2 rounded-lg 3xl:text-lg 3xl:px-6 3xl:py-3`
-- Nodes row: `flex items-center gap-3 3xl:gap-5`
+- Nodes row: `flex items-center gap-4`
 
 **Step node states:**
 
@@ -194,7 +202,7 @@ const GRID_CLASSES = "grid grid-cols-3 gap-4"
 ```
 Applied to the container element AND passed to `<CodeCallout classes={GRID_CLASSES} />`.
 
-**Container wrapper:** `"mt-3 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl 3xl:mt-4 3xl:p-6"`
+**Container wrapper:** `"mt-4 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl 3xl:mt-4 3xl:p-6"`
 
 **Numbered boxes:** Children 1, 2, 3 — identical markup in both containers.
 ```
@@ -204,15 +212,19 @@ const BOXES = [
   { num: "3", className: "bg-emerald-200 dark:bg-emerald-800 text-emerald-900 dark:text-emerald-100 ..." },
 ]
 ```
-Box base classes: `"flex items-center justify-center size-16 3xl:size-24 rounded-xl text-lg font-bold 3xl:text-2xl"` (appended to each color class string above).
+Box base classes: `"flex items-center justify-center size-16 3xl:size-24 rounded-xl text-xs font-semibold 3xl:text-base"` (appended to each color class string above).
 
-**CodeCallout placement:** Below each container, `"mt-3 3xl:mt-4"`.
+Note: `3xl:size-24` (96px) is a TV-scale legibility override — boxes must remain clearly visible at 1920px display distance. `text-xs font-semibold` with colored backgrounds provides sufficient contrast without needing `font-bold`.
+
+**CodeCallout placement:** Below each container, `"mt-4"`.
 
 ---
 
 ### Section Separator
 
 A plain gap/margin divides the two demo sections — no `<hr>`. Claude's discretion: use `"mt-16 3xl:mt-24"` as the top margin on the flex/grid section heading.
+
+Justification for `mt-24` (96px) at 3xl: TV-scale section break — creates clear visual separation between the two demo sections at 1920px display distance where the slide fills a large TV/monitor.
 
 **Flex/grid section heading:**
 - Label: `"Flex vs. Grid"` — `text-xl font-semibold text-slate-900 dark:text-white 3xl:text-3xl`
@@ -297,14 +309,16 @@ All text and spacing must include `3xl:` escalations. Minimum readable sizes at 
 |---------|---------|-------------|
 | Body copy | `text-sm` (14px) | `3xl:text-xl` (20px) |
 | Overline labels | `text-xs` (12px) | `3xl:text-base` (16px) |
-| CodeCallout mono | `text-[13px]` (13px) | `3xl:text-base` (16px) — locked in CodeCallout.tsx |
+| CodeCallout mono | `text-[13px]` (13px) | `3xl:text-base` (16px) — locked in CodeCallout.tsx (external dependency) |
 | Step node number | `text-sm` (14px) | `3xl:text-xl` (20px) |
 | Step node label | `text-xs` (12px) | `3xl:text-sm` (14px) |
-| Box labels | `text-lg` (18px) | `3xl:text-2xl` (24px) |
+| Box labels | `text-xs` (12px) | `3xl:text-base` (16px) |
 | Section heading | `text-xl` (20px) | `3xl:text-3xl` (30px) |
 | Step node size | `size-10` (40px) | `3xl:size-16` (64px) |
 | Column gap | `gap-6` (24px) | `3xl:gap-12` (48px) |
-| Card padding | `p-6` (24px) | `3xl:p-10` (40px) |
+| Card padding | `p-6` (24px) | `3xl:p-8` (32px) |
+| Flex/grid box size | `size-16` (64px) | `3xl:size-24` (96px) — TV-scale legibility override |
+| Section separator | `mt-16` (64px) | `3xl:mt-24` (96px) — TV-scale section break |
 
 ---
 
