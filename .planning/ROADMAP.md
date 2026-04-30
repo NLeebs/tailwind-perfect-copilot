@@ -78,8 +78,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The slide shows a single element with `dark:md:hover:` stacked variants in a callout, demonstrating that all three variant dimensions compose with one consistent mental model
 **Plans**: 3 plans
 **Wave 1** *(parallel)*
-- [ ] 04-01-PLAN.md — Create ResponsiveDemo client island with tab nav, profile cards, and LAYOUT_CLASSES single-source const
-- [ ] 04-02-PLAN.md — Replace responsiveness-dark-mode/page.tsx stub with full two-section slide; DARK_CLASSES and STACKED_CLASSES consts
+- [x] 04-01-PLAN.md — Create ResponsiveDemo client island with tab nav, profile cards, and LAYOUT_CLASSES single-source const
+- [x] 04-02-PLAN.md — Replace responsiveness-dark-mode/page.tsx stub with full two-section slide; DARK_CLASSES and STACKED_CLASSES consts
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 04-03-PLAN.md — yarn build + yarn lint verification; home nav audit for responsiveness-dark-mode entry
@@ -130,7 +130,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 1. Shared Infrastructure | 3/3 | Complete | 2026-04-29 |
 | 2. Slide 2 — What Is Tailwind | 1/1 | Complete | 2026-04-29 |
 | 3. Slide 3 — Core Utility Classes | 3/3 | Complete | 2026-04-30 |
-| 4. Slide 4 — Responsiveness & Dark Mode | 0/3 | Not started | - |
+| 4. Slide 4 — Responsiveness & Dark Mode | 2/3 | In progress | - |
 | 5. Slide 5 — Customizing Tailwind | 0/TBD | Not started | - |
 | 6. Slide 6 — Conditional Styling | 0/TBD | Not started | - |
 | 7. TV Readability & Quality Pass | 0/TBD | Not started | - |
