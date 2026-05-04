@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
 - [x] **Phase 5: Slide 5 — Customizing Tailwind** - @theme token pipeline, @utility, and @layer base callouts with Shiki
 - [x] **Phase 6: Slide 6 — Conditional Styling** - Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos
-- [ ] **Phase 7: TV Readability & Quality Pass** - 1920px audit, reduced-motion check, build smoke test
+- [x] **Phase 7: TV Readability & Quality Pass** - 1920px audit, reduced-motion check, build smoke test
 
 ## Phase Details
 
@@ -143,7 +143,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] 07-02-PLAN.md — Reduced-motion audit: confirm animate-reveal-up is the only entrance animation and is already gated in globals.css
 
 **Wave 2** *(blocked on Wave 1 completion)*
-- [ ] 07-03-PLAN.md — Final yarn build + yarn lint gate; update STATE.md to 100% complete
+- [x] 07-03-PLAN.md — Final yarn build + yarn lint gate; update STATE.md to 100% complete
 
 ## Progress
 
@@ -158,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 4. Slide 4 — Responsiveness & Dark Mode | 3/3 | Complete | 2026-04-30 |
 | 5. Slide 5 — Customizing Tailwind | 3/3 | Complete | 2026-04-30 |
 | 6. Slide 6 — Conditional Styling | 4/4 | Complete | 2026-05-04 |
-| 7. TV Readability & Quality Pass | 2/3 | In Progress | - |
+| 7. TV Readability & Quality Pass | 3/3 | Complete | 2026-05-04 |

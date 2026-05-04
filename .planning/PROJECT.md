@@ -16,7 +16,7 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 - ✓ SlideLayout component providing consistent chrome (nav bar, back link, slide number badge) — existing
 - ✓ ThemeToggle with localStorage persistence and no-flash inline script — existing
 - ✓ Class-based dark mode via `@custom-variant dark` in globals.css — existing
-- ✓ Custom breakpoints 3xl (1920px) and 4xl (2560px) for TV-scale display — existing
+- ✓ Custom breakpoints 3xl (1920px), 4xl (2560px), and 5xl (3840px) for TV-scale display — validated Phase 7
 - ✓ History of CSS slide with interactive CssTimeline accordion + scroll-reveal animation — existing
 - ✓ Home NavCard grid as the navigation hub between slides — existing
 - ✓ Vitest + React Testing Library test suite — existing
@@ -32,9 +32,9 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 - ✓ **Slide 3 — Core Utility Classes**: CardBuilder 6-step progressive card island (STEPS lookup table, TDD) + FlexGridComparison RSC (single-source consts) — validated Phase 3
 - ✓ **Slide 4 — Responsiveness & Dark Mode**: ResponsiveDemo island (tab nav, breakpoint layouts), dark: callout panel, stacked `dark:md:hover:` variant demo — validated Phase 4
 - ✓ **Slide 5 — Customizing Tailwind**: ShikiBlock async RSC (dual-theme Shiki, !important dark override), @theme `--color-brand-500` token → `bg-brand-500` swatch, @utility scrollbar-hidden with v3 equivalent callout, @layer base live h1 demo — validated Phase 5
-- [ ] **Slide 6 — Conditional Styling**: Interactive React components that change appearance based on state (hover, focus, active, toggled) with inline `cn()` / ternary pattern callouts
-- [ ] **Inline code callouts**: Every demo has minimal readable callouts showing the key Tailwind classes adjacent to the rendered output
-- [ ] **TV readability pass**: Verify all slides are legible and usable at 1920px+ (3xl breakpoint); fonts, contrast, and spacing sized for a large display audience
+- ✓ **Slide 6 — Conditional Styling**: Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos — validated Phase 6
+- ✓ **Inline code callouts**: Every demo has minimal readable callouts showing the key Tailwind classes adjacent to the rendered output — validated Phase 6
+- ✓ **TV readability pass**: All 6 slides legible at 1920px (human-verified), reduced-motion gated, build clean — validated Phase 7
 
 ### Out of Scope
 
