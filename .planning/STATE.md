@@ -68,6 +68,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-30
-Stopped at: Phase 5 complete. Shiki mock + ShikiBlock RSC, globals.css @theme token + @utility, three-section customizing-tailwind slide. 61 tests pass, yarn build exits 0. Advancing to Phase 6.
-Resume file: none
+Last session: 2026-05-04
+Stopped at: Phase 6 context gathered — 3 sections, three-panel comparison, static cn() merge, standalone data-active island. Ready for planning.
+Resume file: .planning/phases/06-slide-6-conditional-styling/06-CONTEXT.md
