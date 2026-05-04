@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Ignore generated files in git worktrees (parallel agent builds)
+    ".claude/worktrees/**",
+    // Ignore coverage output
+    "coverage/**",
   ]),
 ]);
 
