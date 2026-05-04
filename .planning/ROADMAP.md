@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Slide 3 — Core Utility Classes** - Progressive card-building demo and flex vs. grid comparison
 - [x] **Phase 4: Slide 4 — Responsiveness & Dark Mode** - Responsive layout demo and dark: prefix callouts
 - [x] **Phase 5: Slide 5 — Customizing Tailwind** - @theme token pipeline, @utility, and @layer base callouts with Shiki
-- [ ] **Phase 6: Slide 6 — Conditional Styling** - Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos
+- [x] **Phase 6: Slide 6 — Conditional Styling** - Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos
 - [ ] **Phase 7: TV Readability & Quality Pass** - 1920px audit, reduced-motion check, build smoke test
 
 ## Phase Details
@@ -117,14 +117,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. The slide renders a `data-active` attribute toggle where React state sets `data-active` on an element and `data-active:bg-purple-600` drives the visual change, with a callout explaining how headless UI libraries use this pattern
 **Plans**: 4 plans
 **Wave 1** *(parallel)*
-- [ ] 06-01-PLAN.md — Create ConditionalPanels.tsx client island (three-panel Section 1: CSS hover / group-hover / React state + cn())
-- [ ] 06-02-PLAN.md — Create DataActiveDemo.tsx client island (Section 3: data-active attribute toggle)
+- [x] 06-01-PLAN.md — Create ConditionalPanels.tsx client island (three-panel Section 1: CSS hover / group-hover / React state + cn())
+- [x] 06-02-PLAN.md — Create DataActiveDemo.tsx client island (Section 3: data-active attribute toggle)
 
 **Wave 2** *(blocked on Wave 1 completion)*
-- [ ] 06-03-PLAN.md — Replace conditional-styling/page.tsx stub with full three-section slide; yarn build verify
+- [x] 06-03-PLAN.md — Replace conditional-styling/page.tsx stub with full three-section slide; yarn build verify
 
 **Wave 3** *(blocked on Wave 2 completion)*
-- [ ] 06-04-PLAN.md — Write ConditionalPanels.test.tsx and DataActiveDemo.test.tsx; update slide-pages.test.tsx (remove "06" from stubCases, add Conditional Styling content assertions); yarn test phase gate
+- [x] 06-04-PLAN.md — Write ConditionalPanels.test.tsx and DataActiveDemo.test.tsx; update slide-pages.test.tsx (remove "06" from stubCases, add Conditional Styling content assertions); yarn test phase gate
 
 **Cross-cutting constraints:** page.tsx stays RSC (no "use client"); no dynamic class interpolation — PANEL3_CLASSES lookup-table map for React state; single-source const pattern for all 8 CodeCallout-linked strings; data-active: is a native Tailwind v4 variant — no @custom-variant needed; peer input MUST precede its sibling in DOM order; all 3xl: escalations from TV Readability Contract required.
 **UI hint**: yes
@@ -151,5 +151,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 3. Slide 3 — Core Utility Classes | 3/3 | Complete | 2026-04-30 |
 | 4. Slide 4 — Responsiveness & Dark Mode | 3/3 | Complete | 2026-04-30 |
 | 5. Slide 5 — Customizing Tailwind | 3/3 | Complete | 2026-04-30 |
-| 6. Slide 6 — Conditional Styling | 0/4 | Not started | - |
+| 6. Slide 6 — Conditional Styling | 4/4 | Complete | 2026-05-04 |
 | 7. TV Readability & Quality Pass | 0/TBD | Not started | - |
