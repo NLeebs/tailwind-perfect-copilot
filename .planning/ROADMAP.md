@@ -93,8 +93,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Requirements**: S5-01, S5-02, S5-03
 **Success Criteria** (what must be TRUE):
   1. The slide shows globals.css content (Shiki-rendered, syntax-highlighted) alongside a component using `bg-brand-500` — where `--color-brand-500` is defined in an `@theme` block in globals.css — demonstrating the token-to-utility pipeline visually
-  2. The slide shows a `@utility scrollbar-hidden` custom utility definition, with an explicit callout naming the v3 equivalent (`@layer utilities`), readable for attendees who have seen v3 tutorials
-  3. The slide shows the existing `@layer base` h1 gradient rule as a live artifact, with a callout explaining that every slide title inherits these styles without an additional class on the element
+  2. The slide shows a `@utility scrollbar-hidden` custom utility definition, with an explicit callout naming the v3 equivalent (`@layer utilities`) so attendees who've seen v3 content understand the mapping
+  3. The slide shows the existing `@layer base` h1 gradient rule as a live artifact, with a callout explaining that every slide title inherits these styles without an additional class
 **Plans**: 3 plans
 **Wave 1** *(parallel)*
 - [x] 05-01-PLAN.md — Create Shiki Vitest mock + alias and ShikiBlock async RSC component
@@ -137,7 +137,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. All 6 slides are reviewed at exactly 1920px browser width — every text element, callout, and demo label is legible without zooming, with `3xl:` size escalations added wherever the default size fails the TV distance test
   2. All new animations and transitions are confirmed to be gated by `prefers-reduced-motion` (consistent with the existing CssTimeline pattern)
   3. `yarn build && yarn start` completes without errors and all demo interactions work correctly in the production build — no Tailwind classes silently purged
-**Plans**: TBD
+**Plans**: 3 plans
+**Wave 1** *(parallel)*
+- [ ] 07-01-PLAN.md — TV audit + 3xl: fix pass across all 6 slide pages and components
+- [ ] 07-02-PLAN.md — Reduced-motion audit: confirm animate-reveal-up is the only entrance animation and is already gated in globals.css
+
+**Wave 2** *(blocked on Wave 1 completion)*
+- [ ] 07-03-PLAN.md — Final yarn build + yarn lint gate; update STATE.md to 100% complete
 
 ## Progress
 
@@ -152,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 4. Slide 4 — Responsiveness & Dark Mode | 3/3 | Complete | 2026-04-30 |
 | 5. Slide 5 — Customizing Tailwind | 3/3 | Complete | 2026-04-30 |
 | 6. Slide 6 — Conditional Styling | 4/4 | Complete | 2026-05-04 |
-| 7. TV Readability & Quality Pass | 0/TBD | Not started | - |
+| 7. TV Readability & Quality Pass | 0/3 | Not started | - |
