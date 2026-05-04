@@ -46,7 +46,7 @@ Node 22 is required (see `.nvmrc`).
 
 - Config lives entirely in `src/app/globals.css` via `@theme` blocks — there is no `tailwind.config.js`.
 - Dark mode uses a class-based custom variant: `@custom-variant dark (&:where(.dark, .dark *))` — this is the ONLY dark mode mechanism; there is no `prefers-color-scheme` media query.
-- Two custom breakpoints are defined: `3xl` (1920 px) and `4xl` (2560 px) — used throughout for large-display scaling. All demo components must include `3xl:` escalations.
+- Three custom breakpoints are defined: `3xl` (1920 px), `4xl` (2560 px), and `5xl` (3840 px) — used throughout for large-display scaling. All demo components must include `3xl:` escalations.
 - `h1` has a global base style (gradient clip) applied via `@layer base` in `globals.css`.
 - **Never use dynamic class interpolation** (e.g. `` `bg-${color}-500` ``) — Tailwind cannot detect dynamically constructed class strings. Use lookup-table maps with complete static strings.
 
