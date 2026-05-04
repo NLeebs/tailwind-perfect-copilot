@@ -52,11 +52,11 @@ Source: `src/app/customizing-tailwind/page.tsx`, `src/components/CardBuilder.tsx
 
 ## Typography
 
-All sizes are base (< 1920px) → 3xl (≥ 1920px). Weights are font-normal (400) and font-semibold (600) only — no other weights used in this project.
+All sizes are base (< 1920px) → 3xl (≥ 1920px). **Phase 6 declared weights: font-normal (400) and font-semibold (600) only.** The H1 uses `font-bold` (700) via SlideLayout — it is an inherited constraint, not a Phase 6 weight declaration.
 
 | Role | Base Size | 3xl Size | Weight | Line Height | Usage |
 |------|-----------|----------|--------|-------------|-------|
-| Display / H1 | `text-5xl` (48px) | `3xl:text-7xl` (72px) | bold (700) | 1.1 tight | Slide title — inherited from SlideLayout |
+| Display / H1 | `text-5xl` (48px) | `3xl:text-7xl` (72px) | inherited — SlideLayout controls (`font-bold`) | 1.1 tight | Slide title — not a Phase 6 weight decision |
 | Overline label | `text-xs` (12px) | `3xl:text-base` (16px) | semibold (600) | 1.0 | Section and panel category labels |
 | Body / description | `text-sm` (14px) | `3xl:text-xl` (20px) | normal (400) | 1.5 | Demo card body, helper paragraphs |
 | Code / callout | `text-[13px]` | `3xl:text-base` (16px) | normal (400) mono | relaxed (1.625) | CodeCallout component — built-in, do not override |
@@ -365,11 +365,11 @@ No third-party registries. No shadcn. No external component blocks. All UI is ha
 
 ## Checker Sign-Off
 
-- [ ] Dimension 1 Copywriting: PASS
-- [ ] Dimension 2 Visuals: PASS
-- [ ] Dimension 3 Color: PASS
-- [ ] Dimension 4 Typography: PASS
-- [ ] Dimension 5 Spacing: PASS
-- [ ] Dimension 6 Registry Safety: PASS
+- [x] Dimension 1 Copywriting: FLAG ("Toggle" button label is single-word without noun — non-blocking)
+- [x] Dimension 2 Visuals: PASS
+- [x] Dimension 3 Color: PASS
+- [x] Dimension 4 Typography: FLAG (text-[13px] / text-sm are 1px apart — CodeCallout inherited constraint, cannot change)
+- [x] Dimension 5 Spacing: PASS
+- [x] Dimension 6 Registry Safety: PASS
 
-**Approval:** pending
+**Approval:** approved 2026-05-04
