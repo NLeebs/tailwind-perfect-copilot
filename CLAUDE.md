@@ -61,5 +61,5 @@ Node 22 is required (see `.nvmrc`).
 
 1. Create `src/app/<slug>/page.tsx` and wrap content in `<SlideLayout number="NN" title="...">`.
 2. Add an entry to the `slides` array in `src/app/page.tsx`.
-3. Include `3xl:` size escalations on all text and spacing for TV readability.
+3. Include `3xl:` size escalations on all text and spacing for TV readability. Add `4xl:` and `5xl:` escalations for 2560px and 3840px displays where appropriate.
 4. Run `yarn build` after completing the slide to verify no classes are purged.
