@@ -5,7 +5,7 @@ import DataActiveDemo from "@/components/DataActiveDemo";
 
 // ── Section 2 single-source consts — same value used by element + CodeCallout ──
 const MERGE_CALLOUT = "cn('bg-red-500', 'bg-blue-500')\n→ 'bg-blue-500'";
-const PEER_CALLOUT = "peer\npeer-invalid:visible text-red-500";
+const PEER_CALLOUT = "peer\ninvisible peer-invalid:visible text-red-500";
 
 const OVERLINE =
   "text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base";
@@ -56,6 +56,7 @@ export default function ConditionalStyling() {
               */}
               <input
                 type="email"
+                required
                 className="peer w-full rounded-lg border border-slate-200 dark:border-slate-700
                            bg-white dark:bg-slate-900 px-3 py-2 text-sm 3xl:text-base 3xl:px-4 3xl:py-3
                            focus:outline-none focus:ring-2 focus:ring-cyan-500"

@@ -4,7 +4,7 @@ import CodeCallout from "@/components/CodeCallout";
 
 // ── Single-source const — same value used by CodeCallout.classes ──
 // \n renders as a line break in CodeCallout (whitespace-pre-wrap)
-const DATA_CALLOUT = "data-active:bg-purple-600\ndata-active:text-white";
+const DATA_CALLOUT = "data-active:bg-purple-600\ndata-active:text-white\ndata-active:border-purple-600";
 
 const OVERLINE =
   "text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base";

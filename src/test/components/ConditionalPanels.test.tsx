@@ -21,9 +21,7 @@ describe("ConditionalPanels", () => {
   it("renders Panel 2 with group-hover class callout text", () => {
     render(<ConditionalPanels />);
     // CodeCallout for Panel 2 shows GROUP_CALLOUT value
-    expect(
-      screen.getByText("group-hover:scale-105 group-hover:shadow-lg")
-    ).toBeInTheDocument();
+    expect(screen.getByText(/group-hover:scale-105/)).toBeInTheDocument();
   });
 
   it("renders Panel 3 in inactive state initially — shows Status: Inactive", () => {

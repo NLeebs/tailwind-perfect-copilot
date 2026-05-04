@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const HOVER_CLASSES = "hover:bg-sky-50 dark:hover:bg-slate-700";
 
 // GROUP_CALLOUT is what the CodeCallout displays for Panel 2
-const GROUP_CALLOUT = "group-hover:scale-105 group-hover:shadow-lg";
+const GROUP_CALLOUT = "group-hover:scale-105\ngroup-hover:text-sky-700";
 // The actual classes applied to child elements inside the group parent
 const GROUP_AVATAR_CLASSES =
   "group-hover:scale-105 group-hover:bg-sky-200 dark:group-hover:bg-sky-900";
