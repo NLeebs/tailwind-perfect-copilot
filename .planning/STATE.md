@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-04-28)
 ## Current Position
 
 Phase: 6 of 7 (Slide 6 — Conditional Styling)
-Plan: 0 of TBD in current phase
-Status: Phase 5 complete. Phase 6 not yet planned.
-Last activity: 2026-04-30 — Phase 5 complete (Shiki foundation, globals.css additions, three-section slide page)
+Plan: 0 of 4 in current phase
+Status: Phase 6 planned. Ready to execute.
+Last activity: 2026-05-04 — Phase 6 planned (4 plans, 3 waves — ConditionalPanels island, DataActiveDemo island, page assembly, tests)
 
 Progress: [█████████░] 71%
 
@@ -69,5 +69,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-04
-Stopped at: Phase 6 context gathered — 3 sections, three-panel comparison, static cn() merge, standalone data-active island. Ready for planning.
-Resume file: .planning/phases/06-slide-6-conditional-styling/06-CONTEXT.md
+Stopped at: Phase 6 planned — 4 plans in 3 waves. Verification passed. Ready to execute.
+Resume file: .planning/phases/06-slide-6-conditional-styling/06-01-PLAN.md
