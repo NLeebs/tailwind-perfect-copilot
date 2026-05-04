@@ -115,7 +115,18 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The slide shows `cn()` merging conflicting Tailwind classes (e.g., `bg-red-500` overridden by `bg-blue-500`) with the merging logic visible as a CodeCallout
   3. The slide renders a `peer-invalid` form validation demo — an email input with `peer` and a sibling paragraph with `invisible peer-invalid:visible text-red-500` — that activates with no JavaScript
   4. The slide renders a `data-active` attribute toggle where React state sets `data-active` on an element and `data-active:bg-purple-600` drives the visual change, with a callout explaining how headless UI libraries use this pattern
-**Plans**: TBD
+**Plans**: 4 plans
+**Wave 1** *(parallel)*
+- [ ] 06-01-PLAN.md — Create ConditionalPanels.tsx client island (three-panel Section 1: CSS hover / group-hover / React state + cn())
+- [ ] 06-02-PLAN.md — Create DataActiveDemo.tsx client island (Section 3: data-active attribute toggle)
+
+**Wave 2** *(blocked on Wave 1 completion)*
+- [ ] 06-03-PLAN.md — Replace conditional-styling/page.tsx stub with full three-section slide; yarn build verify
+
+**Wave 3** *(blocked on Wave 2 completion)*
+- [ ] 06-04-PLAN.md — Write ConditionalPanels.test.tsx and DataActiveDemo.test.tsx; update slide-pages.test.tsx (remove "06" from stubCases, add Conditional Styling content assertions); yarn test phase gate
+
+**Cross-cutting constraints:** page.tsx stays RSC (no "use client"); no dynamic class interpolation — PANEL3_CLASSES lookup-table map for React state; single-source const pattern for all 8 CodeCallout-linked strings; data-active: is a native Tailwind v4 variant — no @custom-variant needed; peer input MUST precede its sibling in DOM order; all 3xl: escalations from TV Readability Contract required.
 **UI hint**: yes
 
 ### Phase 7: TV Readability & Quality Pass
@@ -140,5 +151,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 3. Slide 3 — Core Utility Classes | 3/3 | Complete | 2026-04-30 |
 | 4. Slide 4 — Responsiveness & Dark Mode | 3/3 | Complete | 2026-04-30 |
 | 5. Slide 5 — Customizing Tailwind | 3/3 | Complete | 2026-04-30 |
-| 6. Slide 6 — Conditional Styling | 0/TBD | Not started | - |
+| 6. Slide 6 — Conditional Styling | 0/4 | Not started | - |
 | 7. TV Readability & Quality Pass | 0/TBD | Not started | - |
