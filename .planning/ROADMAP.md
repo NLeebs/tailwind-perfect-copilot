@@ -139,8 +139,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. `yarn build && yarn start` completes without errors and all demo interactions work correctly in the production build — no Tailwind classes silently purged
 **Plans**: 3 plans
 **Wave 1** *(parallel)*
-- [ ] 07-01-PLAN.md — TV audit + 3xl: fix pass across all 6 slide pages and components
-- [ ] 07-02-PLAN.md — Reduced-motion audit: confirm animate-reveal-up is the only entrance animation and is already gated in globals.css
+- [x] 07-01-PLAN.md — TV audit + 3xl: fix pass across all 6 slide pages and components
+- [x] 07-02-PLAN.md — Reduced-motion audit: confirm animate-reveal-up is the only entrance animation and is already gated in globals.css
 
 **Wave 2** *(blocked on Wave 1 completion)*
 - [ ] 07-03-PLAN.md — Final yarn build + yarn lint gate; update STATE.md to 100% complete
@@ -158,4 +158,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7
 | 4. Slide 4 — Responsiveness & Dark Mode | 3/3 | Complete | 2026-04-30 |
 | 5. Slide 5 — Customizing Tailwind | 3/3 | Complete | 2026-04-30 |
 | 6. Slide 6 — Conditional Styling | 4/4 | Complete | 2026-05-04 |
-| 7. TV Readability & Quality Pass | 0/3 | Not started | - |
+| 7. TV Readability & Quality Pass | 2/3 | In Progress | - |
