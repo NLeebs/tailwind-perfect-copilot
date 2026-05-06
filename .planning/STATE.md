@@ -12,7 +12,7 @@ See: .planning/PROJECT.md (updated 2026-04-28)
 Phase: 7 of 7 (TV Readability & Quality Pass) — COMPLETE
 Plan: 3 of 3 in current phase
 Status: All 7 phases complete. Project is presentation-ready.
-Last activity: 2026-05-04 — Phase 7 complete (verification passed, build gate green)
+Last activity: 2026-05-06 - Completed quick task 260506-q01: Add inline hyperlinks to CssTimeline milestone text
 
 Progress: [██████████] 100%
 
@@ -52,6 +52,12 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260506-q01 | Add inline hyperlinks to CssTimeline milestone text | 2026-05-06 | TBD | [260506-q01-css-timeline-inline-links](.planning/quick/260506-q01-css-timeline-inline-links/) |
 
 ### Blockers/Concerns
 

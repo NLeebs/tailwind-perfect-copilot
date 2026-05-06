@@ -2,6 +2,8 @@
 
 import { useRef, useState, useEffect } from "react";
 
+type MilestoneItem = { text: string; links: Record<string, string> };
+
 interface Era {
   color: string;
   textColor: string;
@@ -9,7 +11,7 @@ interface Era {
   title: string;
   years: string;
   desc: string;
-  milestones: string[];
+  milestones: Array<string | MilestoneItem>;
   tech: string[];
   patterns: string[];
   issues: string[];
@@ -118,10 +120,23 @@ const eras: Era[] = [
       "2010: Ethan Marcotte's 'Responsive Web Design' article in A List Apart",
       "2011: Bootstrap 2 ships — the most widely used CSS framework ever",
       "2012: CSS3 Flexible Box Layout (Flexbox) reaches candidate recommendation",
-      "2013: Flat design replaces skeuomorphism across the industry",
+      {
+        text: "2013: Flat design replaces skeuomorphism across the industry",
+        links: {
+          skeuomorphism:
+            "https://www.figma.com/resource-library/what-is-skeuomorphism/",
+        },
+      },
       "2014: Google announces Material Design",
     ],
-    tech: ["Bootstrap", "Foundation", "Sass / SCSS", "LESS", "Modernizr", "Compass"],
+    tech: [
+      "Bootstrap",
+      "Foundation",
+      "Sass / SCSS",
+      "LESS",
+      "Modernizr",
+      "Compass",
+    ],
     patterns: [
       "Mobile-first design",
       "Fluid grids with percentage widths",
@@ -219,6 +234,45 @@ const eras: Era[] = [
   },
 ];
 
+function renderMilestoneText(
+  item: string | MilestoneItem,
+  textColor: string,
+  darkColor: string,
+): React.ReactNode {
+  if (typeof item === "string") return item;
+  const { text, links } = item;
+  const entries = Object.entries(links);
+  if (entries.length === 0) return text;
+  const pattern = entries
+    .map(([phrase]) => phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|");
+  const parts = text.split(new RegExp(`(${pattern})`, "g"));
+  return (
+    <>
+      {parts.map((part, i) => {
+        const url = links[part];
+        if (url) {
+          return (
+            <a
+              key={i}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={
+                { "--c": textColor, "--cd": darkColor } as React.CSSProperties
+              }
+              className="[color:var(--c)] dark:[color:var(--cd)] underline underline-offset-2 hover:opacity-75 transition-opacity font-medium"
+            >
+              {part}
+            </a>
+          );
+        }
+        return part;
+      })}
+    </>
+  );
+}
+
 function ChevronIcon({ expanded }: { expanded: boolean }) {
   return (
     <svg
@@ -245,7 +299,12 @@ interface TimelineEntryProps {
   onToggle: () => void;
 }
 
-function TimelineEntry({ era, index, isExpanded, onToggle }: TimelineEntryProps) {
+function TimelineEntry({
+  era,
+  index,
+  isExpanded,
+  onToggle,
+}: TimelineEntryProps) {
   const ref = useRef<HTMLLIElement>(null);
   const [inView, setInView] = useState(false);
   const panelId = `era-panel-${index}`;
@@ -260,7 +319,7 @@ function TimelineEntry({ era, index, isExpanded, onToggle }: TimelineEntryProps)
           obs.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: "0px 0px -48px 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -48px 0px" },
     );
     obs.observe(el);
     return () => obs.disconnect();
@@ -316,18 +375,21 @@ function TimelineEntry({ era, index, isExpanded, onToggle }: TimelineEntryProps)
                   Key Milestones
                 </h3>
                 <ul className="space-y-2 3xl:space-y-3 4xl:space-y-4">
-                  {era.milestones.map((m) => (
-                    <li
-                      key={m}
-                      className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400 3xl:text-lg 3xl:gap-3 4xl:text-xl 4xl:gap-4"
-                    >
-                      <span
-                        style={{ backgroundColor: era.color }}
-                        className="mt-[0.4rem] size-1.5 rounded-full shrink-0 3xl:size-2.5 3xl:mt-2 4xl:size-3 4xl:mt-2.5"
-                      />
-                      {m}
-                    </li>
-                  ))}
+                  {era.milestones.map((m) => {
+                    const key = typeof m === "string" ? m : m.text;
+                    return (
+                      <li
+                        key={key}
+                        className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400 3xl:text-lg 3xl:gap-3 4xl:text-xl 4xl:gap-4"
+                      >
+                        <span
+                          style={{ backgroundColor: era.color }}
+                          className="mt-[0.4rem] size-1.5 rounded-full shrink-0 3xl:size-2.5 3xl:mt-2 4xl:size-3 4xl:mt-2.5"
+                        />
+                        {renderMilestoneText(m, era.textColor, era.darkColor)}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
 
