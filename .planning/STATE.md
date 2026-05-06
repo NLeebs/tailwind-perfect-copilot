@@ -5,16 +5,17 @@
 See: .planning/PROJECT.md (updated 2026-05-06)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** v1.0 shipped — between milestones. Run /gsd-new-milestone to plan v1.1.
+**Current focus:** v1.1 — Extended Demos + Slide 2 Rework. Run /gsd-plan-phase [N] to start execution.
 
 ## Current Position
 
-Milestone: v1.0 — SHIPPED 2026-05-06
-Phase: 7 of 7 — All phases complete
-Status: Presentation-ready. Milestone archived. REQUIREMENTS.md deleted (fresh for v1.1).
-Last activity: 2026-05-06 — v1.0 milestone archived and tagged
+Milestone: v1.1 — Extended Demos + Slide 2 Rework
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-05-06 — Milestone v1.1 started
 
-Progress: [██████████] 100%
+Progress: [          ] 0%
 
 ## Performance Metrics
 

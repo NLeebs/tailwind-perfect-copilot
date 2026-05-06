@@ -10,9 +10,20 @@ All six slides are complete and presentation-ready as of v1.0. The app is a runn
 
 Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
 
+## Current Milestone: v1.1 Extended Demos + Slide 2 Rework
+
+**Goal:** Deepen the talk's teaching value — rebuild Slide 2 to lead with the "why Tailwind" story, wire the three deferred interactive demos, and add more CssTimeline inline links.
+
+**Target features:**
+- Slide 2 rework: philosophy intro + 2–3 problem cards + rearranged semantic/utility demo + naming-problem card with CodeCallout
+- EXT-01: Peer-checked radio button bonus slide
+- EXT-02: Container queries demo (`@container`)
+- EXT-03: shiki-magic-move animated code transitions (Slides 5–6)
+- CssTimeline inline link additions
+
 ## Current State
 
-**Version:** v1.0 (shipped 2026-05-06)
+**Version:** v1.1 (in progress — started 2026-05-06)
 **Status:** Presentation-ready. All 6 demo slides built and verified at TV scale.
 **Codebase:** ~2,400 LOC TypeScript/TSX/CSS, Next.js 16 / React 19 / Tailwind v4
 
@@ -49,12 +60,16 @@ What's live:
 - ✓ Inline code callouts on every demo — validated Phase 6
 - ✓ TV readability pass — all 6 slides legible at 1920px, reduced-motion gated, build clean — validated Phase 7
 
-### Active (Next Milestone)
+### Active (v1.1)
 
-- [ ] **EXT-03**: shiki-magic-move animated code transitions for Slides 5–6 — library installed, needs wiring
+- [ ] **S2-01**: Philosophy intro section on Slide 2 — "utility-first CSS framework" definition before the demo
+- [ ] **S2-02**: 2–3 condensed problem cards on Slide 2 — context-switching, naming things is hard, CSS bloat
+- [ ] **S2-03**: Rearranged Slide 2 demo — semantic/utility buttons split one-per-column, existing card below
+- [ ] **S2-04**: Second card on Slide 2 with CodeCallout showing `.card-header {}` / `.card-title {}` / `.card-highlighted {}`
 - [ ] **EXT-01**: Peer-checked radio button bonus slide — deferred from v1
 - [ ] **EXT-02**: Container queries demo (@container) — genuine v4 superpower, deferred from v1
-- [ ] Inline hyperlinks in CssTimeline milestone text — in progress (q01 done; more links to add)
+- [ ] **EXT-03**: shiki-magic-move animated code transitions for Slides 5–6 — library installed, needs wiring
+- [ ] **HIST-01**: More inline hyperlinks in CssTimeline milestone text
 
 ### Out of Scope
 
@@ -72,10 +87,10 @@ What's live:
 ## Context
 
 - **v1.0 shipped:** All 6 demo slides complete, TV-verified, build/lint green
+- **v1.1 in progress:** Slide 2 rework (philosophy + problems + demo rearrange) + 3 deferred demos + CssTimeline links
 - **Talk-ready:** Source code is the teaching material — idiomatic Tailwind patterns throughout
 - **Patterns established:** Single-source const, lookup-table maps, leaf-node client islands, Vitest mock aliases
-- **Known debt:** shiki-magic-move installed but not wired; REQUIREMENTS.md checkbox status fell behind (archived clean)
-- **Next milestone:** Extended demos (EXT-01 through EXT-03), additional CssTimeline enhancements, or talk-night polish
+- **Known debt:** shiki-magic-move installed but not wired
 
 ## Constraints
 
@@ -115,4 +130,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-06 after v1.0 milestone*
+*Last updated: 2026-05-06 — v1.1 milestone started*
