@@ -2,17 +2,17 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-04-28)
+See: .planning/PROJECT.md (updated 2026-05-06)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** All phases complete — project ready for presentation
+**Current focus:** v1.0 shipped — between milestones. Run /gsd-new-milestone to plan v1.1.
 
 ## Current Position
 
-Phase: 7 of 7 (TV Readability & Quality Pass) — COMPLETE
-Plan: 3 of 3 in current phase
-Status: All 7 phases complete. Project is presentation-ready.
-Last activity: 2026-05-06 - Completed quick task 260506-q01: Add inline hyperlinks to CssTimeline milestone text
+Milestone: v1.0 — SHIPPED 2026-05-06
+Phase: 7 of 7 — All phases complete
+Status: Presentation-ready. Milestone archived. REQUIREMENTS.md deleted (fresh for v1.1).
+Last activity: 2026-05-06 — v1.0 milestone archived and tagged
 
 Progress: [██████████] 100%
 

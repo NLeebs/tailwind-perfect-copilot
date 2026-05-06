@@ -2,11 +2,27 @@
 
 ## What This Is
 
-An interactive presentation and demo web app for a live technical talk on Tailwind CSS. Each of six topic areas lives on its own Next.js page — with live demos, interactive examples, and inline code callouts that show the Tailwind classes powering every effect. The audience is mixed frontend devs (React/Vue/plain JS) who can pull down the repo and follow along in their IDEs.
+An interactive presentation and demo web app for a live technical talk on Tailwind CSS. Six topic areas each live on their own Next.js page — with live demos, interactive examples, and inline code callouts showing the Tailwind classes powering every effect. The audience is mixed frontend devs (React/Vue/plain JS) who can pull down the repo and follow along in their IDEs.
+
+All six slides are complete and presentation-ready as of v1.0. The app is a runnable teaching artifact: every demo is implemented idiomatically so the source code IS the lesson.
 
 ## Core Value
 
 Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
+
+## Current State
+
+**Version:** v1.0 (shipped 2026-05-06)
+**Status:** Presentation-ready. All 6 demo slides built and verified at TV scale.
+**Codebase:** ~2,400 LOC TypeScript/TSX/CSS, Next.js 16 / React 19 / Tailwind v4
+
+What's live:
+- Slide 2 — What Is Tailwind (semantic vs. utility comparison)
+- Slide 3 — Core Utility Classes (CardBuilder + FlexGridComparison)
+- Slide 4 — Responsiveness & Dark Mode (ResponsiveDemo + dark: panel + stacked variants)
+- Slide 5 — Customizing Tailwind (ShikiBlock + @theme token pipeline + @utility + @layer base)
+- Slide 6 — Conditional Styling (three-panel + peer-invalid + data-active + full test suite)
+- TV readability pass: 3xl: escalations verified, reduced-motion gate confirmed, build/lint green
 
 ## Requirements
 
@@ -25,16 +41,20 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 - ✓ `<CodeCallout>` RSC at `src/components/CodeCallout.tsx` — TV-legible chip with dark: and 3xl: — validated Phase 1
 - ✓ Runtime deps installed: clsx, tailwind-merge@^3, motion, shiki, shiki-magic-move — validated Phase 1
 - ✓ Single dark mode source of truth — prefers-color-scheme removed, @custom-variant dark authoritative — validated Phase 1
+- ✓ Slide 2 — semantic vs. utility button comparison + "class list is documentation" card — validated Phase 2
+- ✓ Slide 3 — CardBuilder 6-step progressive card (STEPS lookup table, TDD) + FlexGridComparison RSC — validated Phase 3
+- ✓ Slide 4 — ResponsiveDemo island (tab nav, breakpoint layouts), dark: callout panel, stacked dark:md:hover: variant — validated Phase 4
+- ✓ Slide 5 — ShikiBlock async RSC (dual-theme Shiki, !important dark override), @theme --color-brand-500 token → bg-brand-500 swatch, @utility scrollbar-hidden with v3 callout, @layer base live h1 demo — validated Phase 5
+- ✓ Slide 6 — Three-panel CSS/group/React-state comparison, peer-invalid, data-active demos — validated Phase 6
+- ✓ Inline code callouts on every demo — validated Phase 6
+- ✓ TV readability pass — all 6 slides legible at 1920px, reduced-motion gated, build clean — validated Phase 7
 
-### Active
+### Active (Next Milestone)
 
-- ✓ **Slide 2 — What Is Tailwind**: Semantic vs. utility button comparison + single-source card callout — validated Phase 2
-- ✓ **Slide 3 — Core Utility Classes**: CardBuilder 6-step progressive card island (STEPS lookup table, TDD) + FlexGridComparison RSC (single-source consts) — validated Phase 3
-- ✓ **Slide 4 — Responsiveness & Dark Mode**: ResponsiveDemo island (tab nav, breakpoint layouts), dark: callout panel, stacked `dark:md:hover:` variant demo — validated Phase 4
-- ✓ **Slide 5 — Customizing Tailwind**: ShikiBlock async RSC (dual-theme Shiki, !important dark override), @theme `--color-brand-500` token → `bg-brand-500` swatch, @utility scrollbar-hidden with v3 equivalent callout, @layer base live h1 demo — validated Phase 5
-- ✓ **Slide 6 — Conditional Styling**: Three-panel CSS/group/React-state comparison, peer-invalid, data-attribute demos — validated Phase 6
-- ✓ **Inline code callouts**: Every demo has minimal readable callouts showing the key Tailwind classes adjacent to the rendered output — validated Phase 6
-- ✓ **TV readability pass**: All 6 slides legible at 1920px (human-verified), reduced-motion gated, build clean — validated Phase 7
+- [ ] **EXT-03**: shiki-magic-move animated code transitions for Slides 5–6 — library installed, needs wiring
+- [ ] **EXT-01**: Peer-checked radio button bonus slide — deferred from v1
+- [ ] **EXT-02**: Container queries demo (@container) — genuine v4 superpower, deferred from v1
+- [ ] Inline hyperlinks in CssTimeline milestone text — in progress (q01 done; more links to add)
 
 ### Out of Scope
 
@@ -43,47 +63,50 @@ Every slide must both show the output AND make it obvious what Tailwind code pro
 - Analytics or event tracking — not needed for a talk resource
 - Slide presenter mode / speaker notes — navigating from the home NavCard grid is sufficient
 - Keyboard slide-to-slide navigation — back-to-home navigation model is the chosen approach
+- Live CSS editor / real-time class applier — editor complexity becomes the demo; typos fail live
+- Simulated phone frames for responsive demo — kills the live browser-resize moment; feels fake on TV
+- Full code blocks on slide pages — unreadable at TV distance
+- Tailwind cheatsheet / comprehensive class reference — overwhelming; no single class is memorable when all are shown
+- Tailwind Play iframe embed — iframe interaction is awkward; loses the "codebase IS the playground" quality
 
 ## Context
 
-- **Existing codebase:** The app scaffold is fully in place — routing, layout, dark mode, responsive breakpoints, and the history-of-css slide are done. The remaining 5 slides are stubs with "Content coming soon" placeholders.
-- **Demo code IS the teaching material:** Because the audience can clone the repo, the source code of each slide page is part of the lesson. Demos should use idiomatic Tailwind patterns that are worth studying.
-- **Talk audience:** Mixed frontend experience — React devs, Vue devs, plain JS devs, varying CSS fluency. Assume no prior Tailwind knowledge.
-- **Presentation context:** Displayed on large TVs (1080p–4K). Audience also has laptops. Need to read at distance AND be usable up close.
-- **Navigation model:** Presenter and audience navigate from the home page card grid. No in-slide prev/next needed.
-- **Code visibility:** Inline on the slide — minimal callouts highlighting the specific Tailwind classes adjacent to each demo. Not full code blocks; just the key parts.
+- **v1.0 shipped:** All 6 demo slides complete, TV-verified, build/lint green
+- **Talk-ready:** Source code is the teaching material — idiomatic Tailwind patterns throughout
+- **Patterns established:** Single-source const, lookup-table maps, leaf-node client islands, Vitest mock aliases
+- **Known debt:** shiki-magic-move installed but not wired; REQUIREMENTS.md checkbox status fell behind (archived clean)
+- **Next milestone:** Extended demos (EXT-01 through EXT-03), additional CssTimeline enhancements, or talk-night polish
 
 ## Constraints
 
 - **Tech stack**: Next.js 16, React 19, Tailwind v4, TypeScript, Yarn — no changes to core stack
 - **Tailwind config**: All config in `globals.css` via `@theme` — no `tailwind.config.js` to create or maintain
-- **Timeline**: Talk is 1–2 months out — time to build properly, but not to over-engineer
 - **Server components**: Default to RSC; only add `"use client"` when browser APIs (state, refs, observers) are required
-- **Repo-first**: The codebase must be self-contained and runnable with `yarn dev` after a fresh clone — no env vars, no external services
+- **Repo-first**: Self-contained and runnable with `yarn dev` after a fresh clone — no env vars, no external services
+- **No dynamic class interpolation**: All class strings must be complete static literals (Tailwind purger safety)
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Tailwind v4 config in globals.css only | Demonstrates v4's CSS-first config approach — teaches by example | — Pending |
-| Class-based dark mode via @custom-variant | Shows how Tailwind v4 handles custom variants; works alongside the ThemeToggle demo | — Pending |
-| Home NavCard grid as navigation hub | Simpler to navigate for both presenter and audience; avoids slide-runner complexity | — Pending |
-| Minimal inline callouts over full code blocks | Audience reading from a distance; dense code blocks hurt readability at TV scale | — Pending |
-| Per-slide RSC + "use client" isolation | Teaches the RSC boundary model implicitly while keeping demos interactive | — Pending |
-| tailwind-merge@^3 (not v2) | v2 is Tailwind v3-only; this project uses Tailwind v4 | Phase 1 |
-| motion package (not framer-motion) | Maintained package; imported as "motion/react" | Phase 1 |
-| CodeCallout class string as single static literal | Tailwind purger cannot detect dynamically constructed class strings | Phase 1 |
+| Tailwind v4 config in globals.css only | Demonstrates v4's CSS-first config approach — teaches by example | ✓ Good |
+| Class-based dark mode via @custom-variant | Shows how Tailwind v4 handles custom variants; works alongside ThemeToggle demo | ✓ Good |
+| Home NavCard grid as navigation hub | Simpler to navigate for presenter and audience; avoids slide-runner complexity | ✓ Good |
+| Minimal inline callouts over full code blocks | Audience at TV distance; dense code blocks hurt readability | ✓ Good |
+| Per-slide RSC + "use client" isolation | Teaches the RSC boundary model implicitly while keeping demos interactive | ✓ Good |
+| tailwind-merge@^3 (not v2) | v2 is Tailwind v3-only; project uses Tailwind v4 | ✓ Good |
+| motion package (not framer-motion) | Maintained package; imported as "motion/react" | ✓ Good |
+| CodeCallout class string as single static literal | Tailwind purger cannot detect dynamically constructed class strings | ✓ Good |
+| Single-source const pattern for CodeCallout props | Extract className string as named const so element and callout never drift | ✓ Good — established Phase 2, used everywhere |
+| Lookup-table map for toggled state (LAYOUT_CLASSES, PANEL3_CLASSES, etc.) | Complete static strings keyed by state — Tailwind-safe and type-safe | ✓ Good |
+| !important in .dark .shiki CSS override | Shiki dual-theme embeds inline style= that beats class selectors | ✓ Good |
+| ShikiBlock Vitest mock via resolve.alias | Async RSC cannot render in jsdom without Next.js framework | ✓ Good |
+| ESLint globalIgnores for worktree .next dirs | Parallel agent .next/ generated files caused spurious lint errors | ✓ Good |
+| MilestoneItem type for CssTimeline links | Allows inline hyperlinks in milestone text without restructuring the eras data | ✓ Good — established quick task 260506-q01 |
 
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
-
-**After each phase transition** (via `/gsd-transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-5. "What This Is" still accurate? → Update if drifted
 
 **After each milestone** (via `/gsd-complete-milestone`):
 1. Full review of all sections
@@ -92,4 +115,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-30 — Phase 5 complete*
+*Last updated: 2026-05-06 after v1.0 milestone*
