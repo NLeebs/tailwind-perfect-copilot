@@ -57,7 +57,7 @@ None yet.
 
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
-| 260506-q01 | Add inline hyperlinks to CssTimeline milestone text | 2026-05-06 | TBD | [260506-q01-css-timeline-inline-links](.planning/quick/260506-q01-css-timeline-inline-links/) |
+| 260506-q01 | Add inline hyperlinks to CssTimeline milestone text | 2026-05-06 | c0d3b3b | [260506-q01-css-timeline-inline-links](.planning/quick/260506-q01-css-timeline-inline-links/) |
 
 ### Blockers/Concerns
 
