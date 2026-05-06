@@ -44,11 +44,11 @@
 
 | REQ-ID | Phase | Notes |
 |--------|-------|-------|
-| S2-01 | TBD | |
-| S2-02 | TBD | |
-| S2-03 | TBD | |
-| S2-04 | TBD | |
-| EXT-01 | TBD | |
-| EXT-02 | TBD | |
-| EXT-03 | TBD | |
-| HIST-01 | TBD | |
+| S2-01 | Phase 8 | Philosophy intro before demo |
+| S2-02 | Phase 8 | Problem cards above demo |
+| S2-03 | Phase 8 | Side-by-side semantic/utility in two-column grid |
+| S2-04 | Phase 8 | Naming-problem CodeCallout card below Tailwind card |
+| EXT-01 | Phase 9 | New bonus slide — peer-checked radio pattern |
+| EXT-02 | Phase 9 | New bonus slide — @container queries demo |
+| EXT-03 | Phase 10 | Wire shiki-magic-move on Slides 5–6 |
+| HIST-01 | Phase 10 | Additional inline links in CssTimeline milestone text |

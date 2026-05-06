@@ -5,15 +5,15 @@
 See: .planning/PROJECT.md (updated 2026-05-06)
 
 **Core value:** Every slide must both show the output AND make it obvious what Tailwind code produces it — so the audience leaves with a mental model they can immediately apply.
-**Current focus:** v1.1 — Extended Demos + Slide 2 Rework. Run /gsd-plan-phase [N] to start execution.
+**Current focus:** v1.1 — Phase 8: Slide 2 Rework (ready to plan)
 
 ## Current Position
 
 Milestone: v1.1 — Extended Demos + Slide 2 Rework
-Phase: Not started (defining requirements)
+Phase: 8 of 10 (Slide 2 Rework)
 Plan: —
-Status: Defining requirements
-Last activity: 2026-05-06 — Milestone v1.1 started
+Status: Ready to plan
+Last activity: 2026-05-06 — v1.1 roadmap defined (Phases 8–10)
 
 Progress: [          ] 0%
 
@@ -43,38 +43,30 @@ Progress: [          ] 0%
 Decisions are logged in PROJECT.md Key Decisions table.
 Recent decisions affecting current work:
 
-- Phase 1: Remove `prefers-color-scheme` media query from globals.css — `@custom-variant dark` is the single dark mode source of truth
-- Phase 1: `tailwind-merge` must be v3 (v2 is Tailwind v3 only); import from `"motion/react"` not `"framer-motion"`
 - All phases: No dynamic class string interpolation — use lookup-table maps with complete class strings everywhere
 - All phases: Every interactive demo is a leaf-node "use client" island; page.tsx stays RSC
 - Phase 2: Single-source const pattern — extract className string as a named const so both the element and its CodeCallout use the same value (prevents drift)
 - Phase 2: Two-column grid with labeled overlines established as the slide layout pattern: `grid grid-cols-2 gap-6 3xl:gap-12` with `text-xs uppercase tracking-widest` overlines
+- Quick task 260506-q01: MilestoneItem type established for inline hyperlinks in CssTimeline — HIST-01 extends this pattern
 
 ### Pending Todos
 
 None yet.
 
-### Quick Tasks Completed
-
-| # | Description | Date | Commit | Directory |
-|---|-------------|------|--------|-----------|
-| 260506-q01 | Add inline hyperlinks to CssTimeline milestone text | 2026-05-06 | c0d3b3b | [260506-q01-css-timeline-inline-links](.planning/quick/260506-q01-css-timeline-inline-links/) |
-
 ### Blockers/Concerns
 
-- Phase 5: Shiki dual-theme CSS injection with `@custom-variant dark` should be prototyped early — selector specificity with `html.dark .shiki` is untested against this project's setup
-- Phase 4: Resolved — interactive tabs approach chosen (discuss-phase D-01); constrained container with LAYOUT_CLASSES map drives tab → layout switching
+- Phase 10 (EXT-03): shiki-magic-move is installed but unwired — prototype the MagicMove component against Slide 5's ShikiBlock early to validate the animation API before committing to both slides.
 
 ## Deferred Items
 
 | Category | Item | Status | Deferred At |
 |----------|------|--------|-------------|
-| v2 | Container queries demo (@container) | Deferred | Init |
-| v2 | peer-checked radio button bonus slide | Deferred | Init |
-| v2 | shiki-magic-move animated code transitions | Deferred | Init |
+| v2 | Full shiki-magic-move coverage across all slides | Deferred | v1.1 scope |
+| v2 | Presenter mode / speaker notes | Deferred | Init |
+| v2 | Keyboard slide-to-slide navigation | Deferred | Init |
 
 ## Session Continuity
 
-Last session: 2026-05-04
-Stopped at: Phase 7 planned — ready to execute
-Resume file: .planning/phases/07-tv-readability-quality-pass/07-01-PLAN.md
+Last session: 2026-05-06
+Stopped at: v1.1 roadmap written — Phases 8, 9, 10 defined
+Resume file: None — run /gsd-plan-phase 8 to start
