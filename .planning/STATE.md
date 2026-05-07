@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: — Extended Demos + Slide 2 Rework
 status: executing
-stopped_at: Phase 8 Plan 01 complete — Wave 0 test scaffolding committed
-last_updated: "2026-05-07T15:20:00Z"
-last_activity: 2026-05-07 -- Phase 8 Plan 01 executed (Wave 0 test scaffold)
+stopped_at: Phase 8 Plan 02 complete — SemanticButton and UtilityButton components committed
+last_updated: "2026-05-07T15:18:33Z"
+last_activity: 2026-05-07 -- Phase 8 Plan 02 executed (component extraction Wave 1)
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State
@@ -27,11 +27,11 @@ See: .planning/PROJECT.md (updated 2026-05-06)
 
 Milestone: v1.1 — Extended Demos + Slide 2 Rework
 Phase: 8 of 10 (Slide 2 Rework)
-Plan: 01 complete, 02 next
+Plan: 02 complete, 03 next
 Status: Executing
-Last activity: 2026-05-07 -- Phase 8 Plan 01 complete (Wave 0 test scaffold)
+Last activity: 2026-05-07 -- Phase 8 Plan 02 complete (SemanticButton + UtilityButton component extraction)
 
-Progress: [|||       ] 33%
+Progress: [||||||    ] 67%
 
 ## Performance Metrics
 
@@ -45,7 +45,7 @@ Progress: [|||       ] 33%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 8 (Slide 2 Rework) | 1/3 | 5 min | 5 min |
+| 8 (Slide 2 Rework) | 2/3 | 6 min | 3 min |
 
 **Recent Trend:**
 
@@ -86,5 +86,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-05-07
-Stopped at: Phase 8 Plan 01 complete — Wave 0 test scaffolding committed
-Resume file: .planning/phases/08-slide-2-rework/08-02-PLAN.md
+Stopped at: Phase 8 Plan 02 complete — SemanticButton and UtilityButton components committed
+Resume file: .planning/phases/08-slide-2-rework/08-03-PLAN.md
