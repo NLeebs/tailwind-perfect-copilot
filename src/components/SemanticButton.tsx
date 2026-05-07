@@ -24,7 +24,7 @@ export default function SemanticButton() {
         Button
       </button>
 
-      <div className="mt-4 3xl:mt-8">
+      <div className="mt-4 3xl:mt-8 4xl:mt-10">
         <CodeCallout classes={BTN_CSS_DEFINITION} />
       </div>
     </div>
