@@ -9,10 +9,10 @@
 
 ### Slide 2 Rework — What Is Tailwind
 
-- [ ] **S2-01**: User sees a philosophy intro section on Slide 2 before the existing demo — includes a "utility-first CSS framework" definition and the core concept (style in markup, composable primitives)
-- [ ] **S2-02**: User sees 2–3 condensed problem cards above the demo (context-switching between HTML/CSS, naming things is hard, CSS bloat) — TV-legible at 1920px
-- [ ] **S2-03**: User sees the semantic vs. utility button demos split one-per-column in the two-column grid (rearranged from the current single-column layout)
-- [ ] **S2-04**: User sees a second card below the existing Tailwind card demo with a `CodeCallout` showing `.card-header {}` / `.card-title {}` / `.card-highlighted {}` to illustrate the naming-things-is-hard problem live
+- [x] **S2-01**: User sees a philosophy intro section on Slide 2 before the existing demo — includes a "utility-first CSS framework" definition and the core concept (style in markup, composable primitives)
+- [x] **S2-02**: User sees 2–3 condensed problem cards above the demo (context-switching between HTML/CSS, naming things is hard, CSS bloat) — TV-legible at 1920px
+- [x] **S2-03**: User sees the semantic vs. utility button demos split one-per-column in the two-column grid (rearranged from the current single-column layout)
+- [x] **S2-04**: User sees a second card below the existing Tailwind card demo with a `CodeCallout` showing `.card-header {}` / `.card-title {}` / `.card-highlighted {}` to illustrate the naming-things-is-hard problem live
 
 ### Extended Demos
 

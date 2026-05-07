@@ -26,7 +26,7 @@ Full archive: [.planning/milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 
 **Milestone Goal:** Deepen the talk's teaching value — rebuild Slide 2 to lead with the "why Tailwind" story, wire three deferred interactive demos, add more CssTimeline inline links.
 
-- [ ] **Phase 8: Slide 2 Rework** - Rebuild the "What Is Tailwind" slide with a philosophy intro, problem cards, rearranged demo, and a naming-problem CodeCallout card
+- [x] **Phase 8: Slide 2 Rework** - Rebuild the "What Is Tailwind" slide with a philosophy intro, problem cards, rearranged demo, and a naming-problem CodeCallout card (completed 2026-05-07)
 - [ ] **Phase 9: Bonus Demo Slides** - Add the peer-checked radio button slide and the container queries slide as standalone navigable pages
 - [ ] **Phase 10: shiki-magic-move & CssTimeline Polish** - Wire animated code transitions on Slides 5–6 and extend CssTimeline inline hyperlinks
 
@@ -44,7 +44,7 @@ Full archive: [.planning/milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 **Plans**: 3 plans
 - [x] 08-01-PLAN.md — Wave 0: scaffold failing tests for SemanticButton, UtilityButton, and the reworked WhatIsTailwind page (locks S2-01, S2-02, S2-03, S2-04 behavior) ✅ 2026-05-07
 - [x] 08-02-PLAN.md — Wave 1: create SemanticButton.tsx (client island, always-visible BTN_CSS_DEFINITION callout) and UtilityButton.tsx (RSC, single-source TAILWIND_BTN_CLASSES) ✅ 2026-05-07
-- [ ] 08-03-PLAN.md — Wave 2: rewrite what-is-tailwind/page.tsx with four-section narrative (intro → problem cards → two-column demo with naming card in left column); delete ButtonComparison.tsx
+- [x] 08-03-PLAN.md — Wave 2: rewrite what-is-tailwind/page.tsx with four-section narrative (intro → problem cards → two-column demo with naming card in left column); delete ButtonComparison.tsx
 **UI hint**: yes
 
 ### Phase 9: Bonus Demo Slides
@@ -80,6 +80,6 @@ Full archive: [.planning/milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 | 5. Slide 5 — Customizing Tailwind | v1.0 | 3/3 | Complete | 2026-04-30 |
 | 6. Slide 6 — Conditional Styling | v1.0 | 4/4 | Complete | 2026-05-04 |
 | 7. TV Readability & Quality Pass | v1.0 | 3/3 | Complete | 2026-05-04 |
-| 8. Slide 2 Rework | v1.1 | 2/3 | In progress | - |
+| 8. Slide 2 Rework | v1.1 | 3/3 | Complete   | 2026-05-07 |
 | 9. Bonus Demo Slides | v1.1 | 0/? | Not started | - |
 | 10. shiki-magic-move & CssTimeline Polish | v1.1 | 0/? | Not started | - |
