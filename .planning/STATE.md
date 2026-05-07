@@ -13,7 +13,7 @@ Milestone: v1.1 — Extended Demos + Slide 2 Rework
 Phase: 8 of 10 (Slide 2 Rework)
 Plan: —
 Status: Ready to plan
-Last activity: 2026-05-06 — v1.1 roadmap defined (Phases 8–10)
+Last activity: 2026-05-07 — Phase 8 UI-SPEC, RESEARCH.md, VALIDATION.md ready
 
 Progress: [          ] 0%
 
@@ -69,4 +69,4 @@ None yet.
 
 Last session: 2026-05-06
 Stopped at: v1.1 roadmap written — Phases 8, 9, 10 defined
-Resume file: None — run /gsd-plan-phase 8 to start
+Resume file: .planning/phases/08-slide-2-rework/08-UI-SPEC.md
