@@ -41,7 +41,10 @@ Full archive: [.planning/milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
   2. User sees 2–3 condensed problem cards (context-switching, naming things is hard, CSS bloat) above the interactive demo — legible at 1920px
   3. User sees the semantic button demo and utility button demo side-by-side in a two-column grid, one per column
   4. User sees a second card below the Tailwind card demo with a CodeCallout showing `.card-header {}`, `.card-title {}`, and `.card-highlighted {}` class names
-**Plans**: TBD
+**Plans**: 3 plans
+- [ ] 08-01-PLAN.md — Wave 0: scaffold failing tests for SemanticButton, UtilityButton, and the reworked WhatIsTailwind page (locks S2-01, S2-02, S2-03, S2-04 behavior)
+- [ ] 08-02-PLAN.md — Wave 1: create SemanticButton.tsx (client island, always-visible BTN_CSS_DEFINITION callout) and UtilityButton.tsx (RSC, single-source TAILWIND_BTN_CLASSES)
+- [ ] 08-03-PLAN.md — Wave 2: rewrite what-is-tailwind/page.tsx with four-section narrative (intro → problem cards → two-column demo with naming card in left column); delete ButtonComparison.tsx
 **UI hint**: yes
 
 ### Phase 9: Bonus Demo Slides
@@ -77,6 +80,6 @@ Full archive: [.planning/milestones/v1.0-ROADMAP.md](milestones/v1.0-ROADMAP.md)
 | 5. Slide 5 — Customizing Tailwind | v1.0 | 3/3 | Complete | 2026-04-30 |
 | 6. Slide 6 — Conditional Styling | v1.0 | 4/4 | Complete | 2026-05-04 |
 | 7. TV Readability & Quality Pass | v1.0 | 3/3 | Complete | 2026-05-04 |
-| 8. Slide 2 Rework | v1.1 | 0/? | Not started | - |
+| 8. Slide 2 Rework | v1.1 | 0/3 | Not started | - |
 | 9. Bonus Demo Slides | v1.1 | 0/? | Not started | - |
 | 10. shiki-magic-move & CssTimeline Polish | v1.1 | 0/? | Not started | - |
