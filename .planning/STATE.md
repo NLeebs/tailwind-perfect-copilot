@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: — Extended Demos + Slide 2 Rework
 status: executing
-stopped_at: v1.1 roadmap written — Phases 8, 9, 10 defined
-last_updated: "2026-05-07T13:54:36.479Z"
-last_activity: 2026-05-07 -- Phase 8 planning complete
+stopped_at: Phase 8 Plan 01 complete — Wave 0 test scaffolding committed
+last_updated: "2026-05-07T15:20:00Z"
+last_activity: 2026-05-07 -- Phase 8 Plan 01 executed (Wave 0 test scaffold)
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 3
-  completed_plans: 0
-  percent: 0
+  completed_plans: 1
+  percent: 33
 ---
 
 # Project State
@@ -27,29 +27,29 @@ See: .planning/PROJECT.md (updated 2026-05-06)
 
 Milestone: v1.1 — Extended Demos + Slide 2 Rework
 Phase: 8 of 10 (Slide 2 Rework)
-Plan: —
-Status: Ready to execute
-Last activity: 2026-05-07 -- Phase 8 planning complete
+Plan: 01 complete, 02 next
+Status: Executing
+Last activity: 2026-05-07 -- Phase 8 Plan 01 complete (Wave 0 test scaffold)
 
-Progress: [          ] 0%
+Progress: [|||       ] 33%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 5 min
+- Total execution time: 0.1 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 8 (Slide 2 Rework) | 1/3 | 5 min | 5 min |
 
 **Recent Trend:**
 
-- Last 5 plans: -
+- Last 5 plans: 5 min
 - Trend: -
 
 *Updated after each plan completion*
@@ -85,6 +85,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-06
-Stopped at: v1.1 roadmap written — Phases 8, 9, 10 defined
-Resume file: .planning/phases/08-slide-2-rework/08-UI-SPEC.md
+Last session: 2026-05-07
+Stopped at: Phase 8 Plan 01 complete — Wave 0 test scaffolding committed
+Resume file: .planning/phases/08-slide-2-rework/08-02-PLAN.md
