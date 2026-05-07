@@ -39,8 +39,9 @@ describe("What is Tailwind page (Phase 8 rework)", () => {
   // S2-03 — Two-column demo grid wires SemanticButton + UtilityButton
   it("renders both demo column overlines (Semantic CSS, Utility-First Tailwind)", () => {
     render(<WhatIsTailwind />);
-    expect(screen.getByText("Semantic CSS")).toBeInTheDocument();
-    expect(screen.getByText("Utility-First Tailwind")).toBeInTheDocument();
+    // Each overline appears in both the button row and the card row.
+    expect(screen.getAllByText("Semantic CSS").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("Utility-First Tailwind").length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders both demo buttons (one from SemanticButton, one from UtilityButton)", () => {

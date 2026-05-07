@@ -12,10 +12,8 @@ describe("SemanticButton", () => {
 
   it("renders BTN_CSS_DEFINITION callout without any click (always visible — D-08)", () => {
     render(<SemanticButton />);
-    // Distinctive fragment of BTN_CSS_DEFINITION verifies the callout is present on initial render.
-    expect(
-      screen.getByText(/background-color: #06b6d4/)
-    ).toBeInTheDocument();
+    // BTN_CSS_DEFINITION is the class selector — callout shows the .btn name on initial render.
+    expect(screen.getByText(/\.btn/)).toBeInTheDocument();
   });
 
   it("does not render any toggle/show-css button (D-08 removes click-to-reveal)", () => {
