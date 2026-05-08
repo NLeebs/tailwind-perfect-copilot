@@ -1,7 +1,7 @@
 "use client";
 import CodeCallout from "@/components/CodeCallout";
 
-const BTN_CSS_DEFINITION = `.btn {\n  background-color: #06b6d4;\n  color: white;\n  font-weight: 600;\n  font-size: 0.875rem;\n  padding: 0.75rem 1.25rem;\n  border-radius: 0.5rem;\n}`;
+const BTN_CSS_DEFINITION = `.btn`;
 
 export default function SemanticButton() {
   return (
