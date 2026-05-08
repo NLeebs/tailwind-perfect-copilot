@@ -29,7 +29,7 @@ Milestone: v1.1 — Extended Demos + Slide 2 Rework
 Phase: 8 of 10 (Slide 2 Rework)
 Plan: 03 complete — Phase 8 done
 Status: Executing
-Last activity: 2026-05-07 -- Phase 8 Plan 03 complete (WhatIsTailwind page rewrite, ButtonComparison deleted, 94/94 tests green, build clean)
+Last activity: 2026-05-08 - Completed quick task 260508-q01: Add color demo/callout to Slide 3 – Utility Classes
 
 Progress: [||||||||||] 100%
 
@@ -70,6 +70,13 @@ Recent decisions affecting current work:
 ### Pending Todos
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260506-q01 | CSS Timeline inline hyperlinks (MilestoneItem type) | 2026-05-06 | — | [260506-q01-css-timeline-inline-links](./quick/260506-q01-css-timeline-inline-links/) |
+| 260508-q01 | Add color demo/callout to Slide 3 – Utility Classes | 2026-05-08 | a92b6f8 | [260508-q01-utility-classes-color-demo](./quick/260508-q01-utility-classes-color-demo/) |
 
 ### Blockers/Concerns
 
