@@ -28,9 +28,7 @@ export default function WhatIsTailwind() {
             href="https://tailwindcss.com/docs/styling-with-utility-classes"
             className="text-cyan-600 dark:text-cyan-400 hover:underline"
             target="_blank"
-          >
-            Utility Class Docs
-          </Link>
+          ></Link>
         </p>
       </section>
 

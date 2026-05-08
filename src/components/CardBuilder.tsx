@@ -27,22 +27,22 @@ const STEPS: StepConfig[] = [
   },
   {
     label: "Color",
-    newClasses: "bg-white dark:bg-slate-900 text-slate-900 dark:text-white",
+    newClasses: "bg-slate-100 dark:bg-slate-700 text-slate-100 dark:text-white",
     allClasses:
-      "w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white",
+      "w-full max-w-sm p-6 text-sm font-semibold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white",
   },
   {
     label: "Borders",
     newClasses:
       "border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm",
     allClasses:
-      "w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm",
+      "w-full max-w-sm p-6 text-sm font-semibold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm",
   },
   {
     label: "Flex",
     newClasses: "flex flex-col gap-4",
     allClasses:
-      "w-full max-w-sm p-6 text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col gap-4",
+      "w-full max-w-sm p-6 text-sm font-semibold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm flex flex-col gap-4",
   },
 ];
 
@@ -51,8 +51,30 @@ export default function CardBuilder() {
 
   return (
     <div>
+      {/* Two-column: card (left) + callout (right) */}
+      <div className="grid grid-cols-2 gap-6 3xl:gap-12 mt-8 3xl:mt-12 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 3xl:p-6">
+        {/* Left: demo card */}
+        <div>
+          <p className="text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base mb-4">
+            RESULT
+          </p>
+          <div className={STEPS[activeStep].allClasses}>
+            <h3>Tailwind Card</h3>
+            <p>Utilities compose one step at a time.</p>
+          </div>
+        </div>
+
+        {/* Right: CodeCallout */}
+        <div>
+          <p className="text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base mb-4">
+            NEW CLASSES
+          </p>
+          <CodeCallout classes={STEPS[activeStep].newClasses} />
+        </div>
+      </div>
+
       {/* Step navigator — full width above the two-column area */}
-      <div className="flex items-center justify-between gap-4 mb-8 3xl:mb-12">
+      <div className="flex items-center justify-between gap-4 mt-8 3xl:mt-12">
         {/* Prev button */}
         <button
           type="button"
@@ -60,7 +82,8 @@ export default function CardBuilder() {
           disabled={activeStep === 0}
           className={cn(
             "flex items-center gap-1 text-sm font-semibold px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors 3xl:text-lg 3xl:px-6 3xl:py-3",
-            activeStep === 0 && "opacity-40 cursor-not-allowed pointer-events-none"
+            activeStep === 0 &&
+              "opacity-40 cursor-not-allowed pointer-events-none",
           )}
         >
           ◄ Prev
@@ -80,7 +103,7 @@ export default function CardBuilder() {
                   "flex items-center justify-center size-10 rounded-full font-semibold text-sm 3xl:size-16 3xl:text-xl transition-colors",
                   i === activeStep
                     ? "bg-cyan-500 text-white ring-2 ring-cyan-500 ring-offset-2 dark:ring-offset-slate-950 cursor-default"
-                    : "bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600"
+                    : "bg-slate-200 dark:bg-slate-700 text-slate-500 dark:text-slate-400 cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-600",
                 )}
               >
                 {i + 1}
@@ -95,38 +118,18 @@ export default function CardBuilder() {
         {/* Next button */}
         <button
           type="button"
-          onClick={() => setActiveStep((s) => Math.min(STEPS.length - 1, s + 1))}
+          onClick={() =>
+            setActiveStep((s) => Math.min(STEPS.length - 1, s + 1))
+          }
           disabled={activeStep === STEPS.length - 1}
           className={cn(
             "flex items-center gap-1 text-sm font-semibold px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors 3xl:text-lg 3xl:px-6 3xl:py-3",
             activeStep === STEPS.length - 1 &&
-              "opacity-40 cursor-not-allowed pointer-events-none"
+              "opacity-40 cursor-not-allowed pointer-events-none",
           )}
         >
           Next ►
         </button>
-      </div>
-
-      {/* Two-column: card (left) + callout (right) */}
-      <div className="grid grid-cols-2 gap-6 3xl:gap-12 mt-8 3xl:mt-12">
-        {/* Left: demo card */}
-        <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base mb-4">
-            RESULT
-          </p>
-          <div className={STEPS[activeStep].allClasses}>
-            <h3>Tailwind Card</h3>
-            <p>Utilities compose one step at a time.</p>
-          </div>
-        </div>
-
-        {/* Right: CodeCallout */}
-        <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-cyan-600 dark:text-cyan-400 3xl:text-base mb-4">
-            NEW CLASSES
-          </p>
-          <CodeCallout classes={STEPS[activeStep].newClasses} />
-        </div>
       </div>
     </div>
   );
