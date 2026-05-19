@@ -12,7 +12,7 @@ const STACKED_CLASSES = "dark:md:hover:bg-sky-600 dark:md:hover:text-white";
 
 export default function ResponsivenessDarkMode() {
   return (
-    <SlideLayout number="04" title="Responsiveness & Dark Mode">
+    <SlideLayout number="04" title="Variant Prefixes">
       {/* Section 1 — Responsive Layouts */}
       <section>
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white 3xl:text-3xl">
@@ -32,7 +32,7 @@ export default function ResponsivenessDarkMode() {
       {/* Section 2 — Dark Mode with dark: */}
       <section>
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white 3xl:text-3xl">
-          Dark Mode with dark:
+          Dark Mode
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400 3xl:text-xl 3xl:mt-4">
           Toggle dark mode — every utility shifts in one class prefix.

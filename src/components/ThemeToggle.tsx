@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useSyncExternalStore, useEffect, useState } from "react";
 import SunIcon from "@/components/icons/SunIcon";
 import MoonIcon from "@/components/icons/MoonIcon";
 
@@ -14,14 +14,13 @@ function subscribe(callback: () => void) {
 }
 
 const getSnapshot = () => document.documentElement.classList.contains("dark");
-const getServerSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 export default function ThemeToggle() {
-  const isDark = useSyncExternalStore(
-    subscribe,
-    getSnapshot,
-    getServerSnapshot,
-  );
+  const [mounted, setMounted] = useState(false);
+  const isDark = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+
+  useEffect(() => setMounted(true), []);
 
   const toggle = () => {
     const next = !isDark;
@@ -36,7 +35,7 @@ export default function ThemeToggle() {
       suppressHydrationWarning
       className="fixed bottom-4 right-4 z-50 flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 bg-white/80 text-slate-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-slate-300 hover:shadow-md dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300 dark:hover:border-slate-600"
     >
-      {isDark ? <SunIcon /> : <MoonIcon />}
+      {mounted && (isDark ? <SunIcon /> : <MoonIcon />)}
     </button>
   );
 }

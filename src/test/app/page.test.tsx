@@ -33,7 +33,7 @@ describe("Home page", () => {
     expect(hrefs).toContain("/history-of-css");
     expect(hrefs).toContain("/what-is-tailwind");
     expect(hrefs).toContain("/utility-classes");
-    expect(hrefs).toContain("/responsiveness-dark-mode");
+    expect(hrefs).toContain("/variant-prefixes");
     expect(hrefs).toContain("/customizing-tailwind");
     expect(hrefs).toContain("/conditional-styling");
   });

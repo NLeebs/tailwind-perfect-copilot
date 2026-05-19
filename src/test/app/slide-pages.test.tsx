@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import WhatIsTailwind from "@/app/what-is-tailwind/page";
 import UtilityClasses from "@/app/utility-classes/page";
-import ResponsivenessDarkMode from "@/app/responsiveness-dark-mode/page";
+import VariantPrefixes from "@/app/variant-prefixes/page";
 import CustomizingTailwind from "@/app/customizing-tailwind/page";
 import ConditionalStyling from "@/app/conditional-styling/page";
 
@@ -10,9 +10,9 @@ const allCases = [
   { Component: WhatIsTailwind, number: "02", title: "What is Tailwind?" },
   { Component: UtilityClasses, number: "03", title: "Core Utility Classes" },
   {
-    Component: ResponsivenessDarkMode,
+    Component: VariantPrefixes,
     number: "04",
-    title: "Responsiveness & Dark Mode",
+    title: "Variant Prefixes",
   },
   { Component: CustomizingTailwind, number: "05", title: "Customizing Tailwind" },
   { Component: ConditionalStyling, number: "06", title: "Conditional Styling" },

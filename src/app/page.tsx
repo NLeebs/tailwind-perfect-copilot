@@ -21,9 +21,9 @@ const slides = [
   },
   {
     number: "04",
-    title: "Responsiveness & Dark Mode",
+    title: "Variant Prefixes",
     tagline: "Breakpoints and dark mode built right into your class names.",
-    href: "/responsiveness-dark-mode",
+    href: "/variant-prefixes",
   },
   {
     number: "05",
