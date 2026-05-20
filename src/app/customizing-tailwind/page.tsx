@@ -20,7 +20,7 @@ const UTILITY_SNIPPET = `/* globals.css */
   border: 1px solid oklch(100% 0 0 / 0.2);
 }`;
 
-const GLASS_USAGE = `glass rounded-2xl p-6 3xl:p-8`;
+const GLASS_USAGE = `glass rounded-2xl p-6 3xl:p-8 text-white text-center`;
 
 const BASE_SNIPPET = `@layer base {
   h1 {
