@@ -22,19 +22,31 @@ body {
 
 @layer base {
   h1 {
-    @apply font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400;
+    @apply mb-16 text-5xl 3xl:text-7xl 4xl:text-8xl font-bold tracking-tight text-transparent bg-clip-text bg-linear-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-400;
   }
 }
 
 @keyframes reveal-up {
-  from { opacity: 0; transform: translateY(1.5rem); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   @keyframes reveal-up {
-    from { opacity: 1; transform: translateY(0); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -46,7 +58,8 @@ body {
   --color-brand-500: #3b82f6;
 }
 
-@utility scrollbar-hidden {
-  scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+@utility glass {
+  backdrop-filter: blur(12px);
+  background: oklch(100% 0 0 / 0.1);
+  border: 1px solid oklch(100% 0 0 / 0.2);
 }
