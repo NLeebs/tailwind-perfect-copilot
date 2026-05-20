@@ -53,9 +53,9 @@ describe("Slide pages", () => {
 });
 
 describe("Customizing Tailwind content", () => {
-  it("renders the @utility scrollbar-hidden v3 equivalent callout (S5-02)", () => {
+  it("renders the @utility glass demo card (S5-02)", () => {
     render(<CustomizingTailwind />);
-    expect(screen.getByText(/scrollbar-hidden/i)).toBeInTheDocument();
+    expect(screen.getByText(/Frosted Glass/i)).toBeInTheDocument();
   });
 
   it("renders the live h1 demo for the @layer base section (S5-03)", () => {
